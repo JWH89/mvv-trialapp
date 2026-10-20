@@ -11,7 +11,6 @@
   const REC_LIMIT_MS = 30000;
 
   const LINKS = {
-    photobook: 'https://www.naarnederland.nl/site/binaries/site-content/collections/documents/2026/zelfstudiepakket/fotoboek-photobook/nn-fotoboek-2014-herzien-omslag-lowres.pdf',
     practiceEn: 'https://english.naarnederland.nl/taking-practice-exams',
     practiceNl: 'https://www.naarnederland.nl/oefenexamens-maken',
     selfStudy: 'https://www.naarnederland.nl/zelfstudiepakket/engels/zelfstudiepakket-engels/zelfstudiepakket-engels',
@@ -109,9 +108,18 @@
   // ---------------------------------------------------------------- content
   let DECKS = [];
   const ITEM = {};
-  function buildDecks(c) {
-    const kns = [];
-    for (let i = 1; i <= 100; i++) kns.push({ id: 'k' + String(i).padStart(3, '0'), n: i });
+  function buildDecks(c, qdata) {
+    // KNS photobook questions come from assets/data/questions.json (made by tools/extract_photobook.py).
+    // Card ids stay k001…k100 so existing progress carries over. The two example questions are not cards.
+    const kns = (qdata.questions || []).filter((q) => !q.example).map((q) => ({
+      id: 'k' + String(q.number).padStart(3, '0'),
+      n: q.number,
+      question: q.question,
+      options: q.options,
+      correct: q.correct,
+      answer: q.answer,
+      image: q.image,
+    }));
     DECKS = [
       { type: 'kns', part: 'kns', weight: 1.6, items: kns },
       { type: 'theme', part: 'kns', weight: 6, items: c.knsThemes || [] },
@@ -121,11 +129,17 @@
     ];
     DECKS.forEach((d) => d.items.forEach((it) => { ITEM[it.id] = Object.assign({ type: d.type, part: d.part }, it); }));
   }
-  async function loadContent() {
-    if (window.MVV_CONTENT) return window.MVV_CONTENT;
-    const r = await fetch('content.json', { cache: 'no-cache' });
-    if (!r.ok) throw new Error('content.json ' + r.status);
+  async function getJson(path) {
+    const r = await fetch(path, { cache: 'no-cache' });
+    if (!r.ok) throw new Error(path + ' ' + r.status);
     return r.json();
+  }
+  async function loadContent() {
+    const [content, questions] = await Promise.all([
+      window.MVV_CONTENT || getJson('content.json'),
+      window.MVV_QUESTIONS || getJson('assets/data/questions.json'),
+    ]);
+    return { content, questions };
   }
 
   // ---------------------------------------------------------------- scheduling
@@ -329,7 +343,7 @@
   function resetCardUi() {
     Rec.cancel();
     clearRecording();
-    ui = { revealed: false, showText: false, recState: 'idle', recUrl: null, recError: null };
+    ui = { revealed: false, showText: false, choice: null, recState: 'idle', recUrl: null, recError: null };
   }
   resetCardUi();
 
@@ -459,7 +473,7 @@
       </section>
       ${pace}
       <div class="aside"><p><strong>Reading (Lezen) is not in this app.</strong> Practise it with the free official practice exam, on a laptop.</p>
-        <p><a href="${LINKS.practiceEn}" target="_blank" rel="noopener">Open the practice exams</a> · <a href="${LINKS.photobook}" target="_blank" rel="noopener">KNS photobook (PDF)</a></p></div>`;
+        <p><a href="${LINKS.practiceEn}" target="_blank" rel="noopener">Open the practice exams</a></p></div>`;
   }
 
   function extraButtons(taper) {
@@ -499,7 +513,12 @@
     if (it.type === 'word') return it.nl;
     if (it.type === 'speak') return it.nl;
     if (it.type === 'complete') return it.nl;
+    if (it.type === 'kns') return knsSpoken(it);
     return '';
+  }
+  // Read out like the exam does: the question, then both choices.
+  function knsSpoken(it) {
+    return `${it.question} ${it.options.A}, of ${it.options.B}?`;
   }
   function autoPlayCurrent() {
     const it = currentItem();
@@ -569,14 +588,27 @@
     }
 
     if (it.type === 'kns') {
-      const front = `<div class="line"><div>
-          <p class="prompt">Photobook question</p>
-          <div class="kns-num">${it.n}</div></div></div>
-        <p>Find question <strong>${it.n}</strong> in the photobook. Look at the photo, read the question and choose your answer <em>before</em> you look at the right answer.</p>
-        <p><a class="btn quiet" href="${LINKS.photobook}" target="_blank" rel="noopener">${ICON.book}Open photobook</a></p>`;
-      const back = ui.revealed ? `<div class="answer"><p class="nl-mid">Did you get question ${it.n} right?</p>
-        <p class="small">Only tap “Knew it” if you chose the right answer without looking.</p></div>` : '';
-      return { body: head + front + back, needsReveal: true, revealLabel: 'I checked the answer' };
+      const choiceBtn = (k) => {
+        let cls = 'choice';
+        if (ui.revealed) cls += k === it.correct ? ' right' : (k === ui.choice ? ' wrong' : ' dim');
+        return `<button class="${cls}" data-action="kns-choose" data-choice="${k}"${ui.revealed ? ' disabled' : ''}>
+          <span class="key">${k}</span><span lang="nl">${esc(it.options[k])}</span></button>`;
+      };
+      const front = `<figure class="kns-photo"><img src="${esc(it.image)}" alt="Photo for question ${it.n}" width="396" height="296" decoding="async">
+          <figcaption>${it.n}</figcaption></figure>
+        <div class="line">${speakBtn(knsSpoken(it), null, false, 'Play question')}
+          <div><p class="nl-mid" lang="nl">${esc(it.question)}</p></div></div>
+        <div class="choices" role="group" aria-label="Choose an answer">${choiceBtn('A')}${choiceBtn('B')}</div>
+        ${ui.revealed ? '' : '<p class="prompt">Look at the photo and choose A or B.</p>'}`;
+      let back = '';
+      if (ui.revealed) {
+        const verdict = ui.choice == null ? ''
+          : ui.choice === it.correct ? '<span class="chip good">Right</span>' : '<span class="chip again">Not right</span>';
+        back = `<div class="answer"><span class="label">Answer ${verdict}</span>
+          <p class="nl-mid" lang="nl">${it.correct}: ${esc(it.answer)}</p>
+          <p class="small">Only tap “Knew it” if you chose the right answer without looking.</p></div>`;
+      }
+      return { body: head + front + back, needsReveal: true, revealLabel: 'Show answer' };
     }
 
     if (it.type === 'theme') {
@@ -738,7 +770,6 @@
 
       <section class="group" aria-labelledby="g-links"><h2 id="g-links">Official material (free)</h2>
         <ul class="links">
-          <li><a href="${LINKS.photobook}" target="_blank" rel="noopener">KNS photobook (PDF)</a><span>All 100 KNS questions with answers. Use it with the KNS cards.</span></li>
           <li><a href="${LINKS.practiceEn}" target="_blank" rel="noopener">Practice exams</a><span>KNS, Reading and Speaking in the real format. Needs a laptop with a microphone.</span></li>
           <li><a href="${LINKS.selfStudy}" target="_blank" rel="noopener">Self-study pack Naar Nederland (English)</a><span>Film, photobook, workbook and audio.</span></li>
           <li><a href="${LINKS.itembank}" target="_blank" rel="noopener">All speaking questions (PDF)</a><span>The official list of speaking questions and sentences.</span></li>
@@ -753,7 +784,7 @@
               <div class="btn-row"><button class="btn" data-action="reset-cancel">Cancel</button><button class="btn again" data-action="reset-ok">Delete progress</button></div></div>`
           : '<button class="btn quiet" data-action="reset">Reset progress</button>'}
       </section>
-      <p class="small">KNS cards only show question numbers. The questions and photos belong to DUO and are in the official photobook.</p>`;
+      <p class="small">For educational purposes only. Unofficial app, not affiliated with DUO, the Ministerie van SZW or the IND. KNS questions and photos come from the official photobook <em>Naar Nederland – Fotoboek</em> (© 2014 Ministerie van SZW); all rights stay with the owners.</p>`;
   }
 
   // ---------------------------------------------------------------- backup
@@ -806,6 +837,7 @@
       case 'extra-review': startSession('extra-review'); break;
       case 'reveal': ui.revealed = true; Rec.stop(); render(); break;
       case 'show-text': ui.showText = true; render(); break;
+      case 'kns-choose': if (!ui.revealed) { ui.choice = el.dataset.choice; ui.revealed = true; stopSound(); render(); } break;
       case 'grade-good': gradeCurrent(true); break;
       case 'grade-again': gradeCurrent(false); break;
       case 'say': Speech.speak(el.dataset.text, el.dataset.audio); break;
@@ -853,6 +885,10 @@
 
   document.addEventListener('keydown', (e) => {
     if (screen !== 'session' || e.target.matches('input, select, textarea')) return;
+    const cur = currentItem();
+    if (!ui.revealed && cur && cur.type === 'kns' && /^[ab]$/i.test(e.key)) {
+      ui.choice = e.key.toUpperCase(); ui.revealed = true; stopSound(); render(); return;
+    }
     if (e.key === ' ' || e.key === 'Enter') {
       if (!ui.revealed) { e.preventDefault(); ui.revealed = true; Rec.stop(); render(); }
     } else if (ui.revealed && (e.key === '1' || e.key === 'ArrowLeft')) gradeCurrent(false);
@@ -868,7 +904,8 @@
   // ---------------------------------------------------------------- start
   async function boot() {
     try {
-      buildDecks(await loadContent());
+      const loaded = await loadContent();
+      buildDecks(loaded.content, loaded.questions);
     } catch (e) {
       $app.innerHTML = `<p class="loading">Could not load the cards. Check your connection and reload.<br><small>${esc(e.message)}</small></p>`;
       return;

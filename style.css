@@ -207,10 +207,32 @@ mark { background: var(--delft-soft); color: var(--delft); padding: 0 3px; borde
 .tip { background: var(--sunk); border-radius: 10px; padding: 10px 12px; font-size: var(--s-sm); }
 .tip b { color: var(--delft); }
 
-.kns-num {
-  font-family: var(--display); font-weight: 800; font-size: 5.5rem; line-height: 0.9; color: var(--delft);
-  letter-spacing: -0.04em; font-variant-numeric: tabular-nums;
+/* KNS photobook card: photo, question, two choices */
+.kns-photo { position: relative; margin: 0; border-radius: 10px; overflow: hidden; background: var(--sunk); }
+.kns-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.kns-photo figcaption {
+  position: absolute; right: 8px; bottom: 8px; min-width: 2.25rem; padding: 2px 8px; border-radius: 8px;
+  background: var(--surface); color: var(--delft); font-family: var(--display); font-weight: 800;
+  font-size: var(--s-md); text-align: center; font-variant-numeric: tabular-nums;
 }
+.choices { display: grid; gap: 10px; }
+.choice {
+  display: flex; align-items: center; gap: 12px; width: 100%; min-height: 52px; padding: 10px 14px;
+  border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  font: inherit; font-weight: 700; font-size: var(--s-md); text-align: left; cursor: pointer; touch-action: manipulation;
+}
+.choice:hover:not([disabled]) { border-color: var(--delft); }
+.choice .key {
+  flex: none; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--delft-soft); color: var(--delft); font-size: var(--s-sm);
+}
+.choice[disabled] { cursor: default; }
+.choice.right { border-color: var(--good); background: var(--good-soft); color: var(--good); }
+.choice.right .key { background: var(--good); color: var(--surface); }
+.choice.wrong { border-color: var(--again); background: var(--again-soft); color: var(--again); }
+.choice.wrong .key { background: var(--again); color: var(--surface); }
+.choice.dim { opacity: 0.55; }
+.answer .label .chip { margin-left: 6px; text-transform: none; letter-spacing: 0; }
 .theme-body { margin: 0; }
 .words-line { font-size: var(--s-sm); color: var(--muted); margin: 0; }
 

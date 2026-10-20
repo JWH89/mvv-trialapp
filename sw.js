@@ -1,21 +1,32 @@
 /* Service worker: makes the app work offline.
    After changing any file, raise VERSION so phones fetch the new files. */
-const VERSION = 'v1';
+const VERSION = 'v2';
 const CACHE = 'mvv-oefenapp-' + VERSION;
+const QUESTIONS = 'assets/data/questions.json';
 const SHELL = [
   './',
   'index.html',
   'style.css',
   'app.js',
   'content.json',
+  QUESTIONS,
   'manifest.webmanifest',
   'icons/icon.svg',
   'icons/icon-192.png',
   'icons/apple-touch-icon.png',
 ];
 
+// Cache the app files, then every photo listed in questions.json, so all KNS cards work offline.
+async function precache() {
+  const c = await caches.open(CACHE);
+  await c.addAll(SHELL);
+  const res = await c.match(QUESTIONS);
+  const data = await res.json();
+  await c.addAll(data.questions.map((q) => q.image));
+}
+
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
+  event.waitUntil(precache().then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (event) => {
@@ -41,15 +52,15 @@ self.addEventListener('fetch', (event) => {
   if (url.origin !== self.location.origin) return;
 
   // Content: network first (so edits arrive), cache as fallback.
-  if (url.pathname.endsWith('/content.json')) {
+  if (url.pathname.endsWith('/content.json') || url.pathname.endsWith('/' + QUESTIONS)) {
     event.respondWith(
       fetch(req).then((res) => { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)); return res; })
-        .catch(() => caches.match(req))
+        .catch(() => caches.match(req, { ignoreSearch: true }))
     );
     return;
   }
 
-  // App files: cache first, network as fallback.
+  // App files and photos: cache first, network as fallback.
   event.respondWith(
     caches.match(req, { ignoreSearch: true }).then((hit) => hit || fetch(req).then((res) => {
       if (res.ok) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)); }
