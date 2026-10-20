@@ -466,7 +466,7 @@
       const solidPct = s.total ? (s.solid / s.total) * 100 : 0;
       const seenPct = s.total ? ((s.seen - s.solid) / s.total) * 100 : 0;
       return `<div class="part"><div class="name">${part.label}<small>${part.sub}</small></div>
-        <div class="fig">${s.solid} / ${s.total}</div>
+        <div class="fig"><b>${s.seen}</b> / ${s.total} seen${s.solid ? ` · ${s.solid} known` : ''}</div>
         <div class="meter" role="img" aria-label="${part.label}: ${s.solid} known, ${s.seen} seen, ${s.total} total">
           <div class="solid" style="width:${solidPct.toFixed(1)}%"></div><div class="seen" style="width:${seenPct.toFixed(1)}%"></div>
         </div></div>`;
@@ -481,7 +481,7 @@
       if (capacity < unseen) {
         const need = Math.ceil((unseen + day.newCount) / daysForNew);
         pace = `<div class="aside"><p><strong>${unseen} cards not seen yet.</strong> At ${state.settings.newPerDay} new cards a day you will see about ${Math.max(0, capacity)} of them before the exam.</p>
-          <p>The app shows KNS and speaking first, so words are the part that may not all fit. To fit everything, choose ${need} a day in Settings.</p></div>`;
+          <p>New cards are spread over all parts every day (KNS gets the biggest share), so each part would keep some unseen cards. To see every card before the exam, choose ${need} a day in Settings.</p></div>`;
       }
     }
 
@@ -505,6 +505,7 @@
         <h3 class="section-title">Progress</h3>
         ${parts}
         <div class="legend"><span>known well</span><span class="l-seen">seen</span></div>
+        <p class="small">A card counts as known well after you knew it on two different days.</p>
       </section>
       ${pace}
       <div class="aside"><p><strong>Reading (Lezen) is not in this app.</strong> Practise it with the free official practice exam, on a laptop.</p>

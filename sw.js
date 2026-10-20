@@ -1,6 +1,6 @@
 /* Service worker: makes the app work offline.
    After changing any file, raise VERSION so phones fetch the new files. */
-const VERSION = 'v3';
+const VERSION = 'v4';
 const CACHE = 'mvv-oefenapp-' + VERSION;
 const QUESTIONS = 'assets/data/questions.json';
 const WORKBOOK = 'assets/data/workbook.json';
