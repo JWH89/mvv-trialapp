@@ -233,6 +233,22 @@ mark { background: var(--delft-soft); color: var(--delft); padding: 0 3px; borde
 .choice.wrong .key { background: var(--again); color: var(--surface); }
 .choice.dim { opacity: 0.55; }
 .answer .label .chip { margin-left: 6px; text-transform: none; letter-spacing: 0; }
+
+/* Workbook card */
+.wb-nl { font-style: italic; }
+.blank {
+  display: inline-block; min-width: 3.5em; border-bottom: 2px solid var(--delft); color: transparent;
+  line-height: 1; margin: 0 2px;
+}
+.wb-key { color: var(--delft); }
+.wb-toggle { align-self: flex-start; min-height: 40px; padding: 6px 14px; font-size: var(--s-sm); }
+.wb-text {
+  background: var(--sunk); border-radius: 10px; padding: 12px 14px; font-size: var(--s-sm);
+  max-height: 45vh; overflow-y: auto;
+}
+.wb-text p { margin: 0 0 10px; }
+.wb-text p:last-child { margin-bottom: 0; }
+.wb-text .wb-title { font-weight: 700; color: var(--delft); }
 .theme-body { margin: 0; }
 .words-line { font-size: var(--s-sm); color: var(--muted); margin: 0; }
 

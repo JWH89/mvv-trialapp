@@ -1,8 +1,9 @@
 /* Service worker: makes the app work offline.
    After changing any file, raise VERSION so phones fetch the new files. */
-const VERSION = 'v2';
+const VERSION = 'v3';
 const CACHE = 'mvv-oefenapp-' + VERSION;
 const QUESTIONS = 'assets/data/questions.json';
+const WORKBOOK = 'assets/data/workbook.json';
 const SHELL = [
   './',
   'index.html',
@@ -10,6 +11,7 @@ const SHELL = [
   'app.js',
   'content.json',
   QUESTIONS,
+  WORKBOOK,
   'manifest.webmanifest',
   'icons/icon.svg',
   'icons/icon-192.png',
@@ -52,7 +54,7 @@ self.addEventListener('fetch', (event) => {
   if (url.origin !== self.location.origin) return;
 
   // Content: network first (so edits arrive), cache as fallback.
-  if (url.pathname.endsWith('/content.json') || url.pathname.endsWith('/' + QUESTIONS)) {
+  if (url.pathname.endsWith('/content.json') || url.pathname.endsWith('/' + QUESTIONS) || url.pathname.endsWith('/' + WORKBOOK)) {
     event.respondWith(
       fetch(req).then((res) => { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)); return res; })
         .catch(() => caches.match(req, { ignoreSearch: true }))

@@ -22,6 +22,7 @@
   const DEFAULT_SETTINGS = {
     examDate: '2026-11-07',
     newPerDay: 15,
+    wbPerDay: 5,          // new workbook cards per day, on top of newPerDay (0 = off)
     autoplay: true,
     voiceURI: '',
     rate: 0.85,
@@ -31,6 +32,7 @@
     { key: 'kns', label: 'KNS', sub: 'photobook + themes' },
     { key: 'speak', label: 'Speaking', sub: 'questions + sentences' },
     { key: 'word', label: 'Words', sub: 'A1 vocabulary' },
+    { key: 'wb', label: 'Workbook', sub: 'lessons 21–65 + tests' },
   ];
 
   const TYPE_LABEL = {
@@ -39,7 +41,12 @@
     speak: 'Speaking · question',
     complete: 'Speaking · finish the sentence',
     word: 'Word',
+    wb: 'Workbook',
   };
+  function typeLabel(it) {
+    if (it.type !== 'wb') return TYPE_LABEL[it.type];
+    return it.test ? `Workbook · test ${it.test}` : `Workbook · les ${it.lesson}`;
+  }
 
   const ICON = {
     gear: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>',
@@ -108,7 +115,8 @@
   // ---------------------------------------------------------------- content
   let DECKS = [];
   const ITEM = {};
-  function buildDecks(c, qdata) {
+  let WB_LESSON = {};
+  function buildDecks(c, qdata, wb) {
     // KNS photobook questions come from assets/data/questions.json (made by tools/extract_photobook.py).
     // Card ids stay k001…k100 so existing progress carries over. The two example questions are not cards.
     const kns = (qdata.questions || []).filter((q) => !q.example).map((q) => ({
@@ -126,7 +134,12 @@
       { type: 'speak', part: 'speak', weight: 1.3, items: c.speakQuestions || [] },
       { type: 'complete', part: 'speak', weight: 1.1, items: c.completions || [] },
       { type: 'word', part: 'word', weight: 0.8, items: c.words || [] },
+      // Workbook exercises (assets/data/workbook.json, made by tools/extract_workbook.py).
+      // Own daily allowance (wbPerDay), introduced in book order.
+      { type: 'wb', part: 'wb', extra: true, items: (wb && wb.items) || [] },
     ];
+    WB_LESSON = {};
+    ((wb && wb.lessons) || []).forEach((l) => { WB_LESSON[l.lesson] = l; });
     DECKS.forEach((d) => d.items.forEach((it) => { ITEM[it.id] = Object.assign({ type: d.type, part: d.part }, it); }));
   }
   async function getJson(path) {
@@ -135,15 +148,17 @@
     return r.json();
   }
   async function loadContent() {
-    const [content, questions] = await Promise.all([
+    const [content, questions, workbook] = await Promise.all([
       window.MVV_CONTENT || getJson('content.json'),
       window.MVV_QUESTIONS || getJson('assets/data/questions.json'),
+      window.MVV_WORKBOOK || getJson('assets/data/workbook.json'),
     ]);
-    return { content, questions };
+    return { content, questions, workbook };
   }
 
   // ---------------------------------------------------------------- scheduling
-  function unseenCount() { return Object.keys(ITEM).filter((id) => !state.cards[id]).length; }
+  // The pace advice is about the core decks; workbook cards have their own allowance.
+  function unseenCount() { return Object.keys(ITEM).filter((id) => !state.cards[id] && ITEM[id].part !== 'wb').length; }
 
   function newBudget(day) {
     const d = day || today();
@@ -152,11 +167,31 @@
     const used = (state.days[d] && state.days[d].newCount) || 0;
     return Math.max(0, Number(state.settings.newPerDay) - used);
   }
+  function wbBudget(day) {
+    const d = day || today();
+    const left = state.settings.examDate ? diffDays(d, state.settings.examDate) : null;
+    if (left !== null && left >= 0 && left <= TAPER_DAYS) return 0;
+    const used = (state.days[d] && state.days[d].wbNew) || 0;
+    return Math.max(0, Number(state.settings.wbPerDay || 0) - used);
+  }
+  // Next unseen workbook cards, in book order.
+  function pickWb(n, exclude) {
+    const deck = DECKS.find((d) => d.type === 'wb');
+    if (!deck || n <= 0) return [];
+    const skip = exclude || new Set();
+    const out = [];
+    for (const it of deck.items) {
+      if (out.length >= n) break;
+      if (!state.cards[it.id] && !skip.has(it.id)) out.push(it.id);
+    }
+    return out;
+  }
 
   // Spread new cards across decks, weighted by priority and by how much is left in each deck.
   function pickNew(n, exclude) {
     const skip = exclude || new Set();
-    const pools = DECKS.map((d) => ({ d, list: d.items.filter((it) => !state.cards[it.id] && !skip.has(it.id)), taken: 0 }));
+    const pools = DECKS.filter((d) => !d.extra)
+      .map((d) => ({ d, list: d.items.filter((it) => !state.cards[it.id] && !skip.has(it.id)), taken: 0 }));
     const out = [];
     for (let i = 0; i < n; i++) {
       let best = null, bestScore = 0;
@@ -184,7 +219,7 @@
 
   function plan() {
     const rev = dueIds().slice(0, MAX_REVIEWS);
-    const nw = pickNew(newBudget());
+    const nw = pickNew(newBudget()).concat(pickWb(wbBudget()));
     return { rev, nw };
   }
 
@@ -343,7 +378,7 @@
   function resetCardUi() {
     Rec.cancel();
     clearRecording();
-    ui = { revealed: false, showText: false, choice: null, recState: 'idle', recUrl: null, recError: null };
+    ui = { revealed: false, showText: false, choice: null, lessonOpen: false, recState: 'idle', recUrl: null, recError: null };
   }
   resetCardUi();
 
@@ -535,6 +570,42 @@
     return `<span class="boxes" title="Leitner box ${c.box} of 5"><span class="label">box ${c.box}</span>${dots}</span>`;
   }
 
+  // ---------------------------------------------------------------- workbook card helpers
+  function hashStr(s) { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; }
+  // Big word pools (a test's 20 matching words) are cut to the answer + 3 others, the same ones every time.
+  function wbChoices(it) {
+    const all = it.choices;
+    if (!all || !all.length) return null;
+    if (all.length <= 5) return all;
+    let seed = hashStr(it.id);
+    const rnd = () => { seed = (Math.imul(seed, 1103515245) + 12345) >>> 0; return seed / 4294967296; };
+    const others = all.filter((c) => c !== it.answer);
+    const pick = new Set([it.answer]);
+    while (pick.size < 4 && others.length) pick.add(others.splice(Math.floor(rnd() * others.length), 1)[0]);
+    return all.filter((c) => pick.has(c));
+  }
+  function wbGloss(it, hasBlank) {
+    const opp = /tegenstelling/i.test(it.instruction);
+    if (it.kind === 'recall') {
+      if (opp) return 'Say the opposite of the word in bold, then check.';
+      return hasBlank ? 'Say the missing word, then check.' : 'Answer the question, then check.';
+    }
+    if (opp) return 'Choose the opposite of the word in bold.';
+    if (it.kind === 'choice') return 'Choose the right answer.';
+    return 'Choose the word that fits.';
+  }
+  // "…" is the blank; [word] marks the word to find the opposite of.
+  function wbPromptHtml(prompt, fill) {
+    let h = esc(prompt).replace(/\[([^\]]+)\]/g, '<strong class="wb-key">$1</strong>');
+    const blanks = (prompt.match(/…/g) || []).length;
+    if (fill && blanks === 1) return h.replace('…', `<mark>${esc(fill)}</mark>`);
+    return h.replace(/…/g, '<span class="blank" aria-label="blank">…</span>');
+  }
+  function wbSpoken(it) {
+    const p = it.prompt.replace(/\[([^\]]+)\]/g, '$1');
+    return (p.match(/…/g) || []).length === 1 ? p.replace('…', it.answer) : `${p} ${it.answer}`;
+  }
+
   function speakBtn(text, audio, big, label) {
     return `<button class="speak${big ? ' big' : ''}" data-action="say" data-text="${esc(text)}"${audio ? ` data-audio="${esc(audio)}"` : ''} aria-label="${esc(label || 'Play')}">${ICON.play}</button>`;
   }
@@ -552,7 +623,7 @@
 
   function cardHtml(it) {
     const id = it.id;
-    const head = `<div class="card-head"><span class="chip delft">${esc(TYPE_LABEL[it.type])}</span>${boxDots(id)}</div>`;
+    const head = `<div class="card-head"><span class="chip delft">${esc(typeLabel(it))}</span>${boxDots(id)}</div>`;
 
     if (it.type === 'word') {
       const front = `<div class="line">${speakBtn(it.nl, it.audio)}<div><p class="nl-big" lang="nl">${esc(it.nl)}</p></div></div>
@@ -611,6 +682,39 @@
       return { body: head + front + back, needsReveal: true, revealLabel: 'Show answer' };
     }
 
+    if (it.type === 'wb') {
+      const choices = wbChoices(it);
+      const hasBlank = it.prompt.includes('…');
+      const choiceBtn = (c, i) => {
+        const k = String.fromCharCode(65 + i);
+        let cls = 'choice';
+        if (ui.revealed) cls += c === it.answer ? ' right' : (c === ui.choice ? ' wrong' : ' dim');
+        return `<button class="${cls}" data-action="wb-choose" data-choice="${esc(c)}"${ui.revealed ? ' disabled' : ''}>
+          <span class="key">${k}</span><span lang="nl">${esc(c)}</span></button>`;
+      };
+      const lesson = it.lesson ? WB_LESSON[it.lesson] : null;
+      const lessonBox = lesson && lesson.text && lesson.text.length
+        ? `<button class="btn quiet wb-toggle" data-action="wb-text" aria-expanded="${ui.lessonOpen}">${ui.lessonOpen ? 'Hide' : 'Show'} lesson text</button>
+           ${ui.lessonOpen ? `<div class="wb-text" lang="nl"><p class="wb-title">Les ${lesson.lesson} · ${esc(lesson.title)}</p>
+             ${lesson.text.map((p) => `<p>${esc(p).replace(/\n/g, '<br>')}</p>`).join('')}</div>` : ''}`
+        : '';
+      const front = `<p class="prompt">${esc(wbGloss(it, hasBlank))}<br><span class="wb-nl" lang="nl">${esc(it.instruction)}</span></p>
+        <p class="nl-mid" lang="nl">${wbPromptHtml(it.prompt, ui.revealed && hasBlank ? it.answer : null)}</p>
+        ${choices ? `<div class="choices" role="group" aria-label="Choose an answer">${choices.map(choiceBtn).join('')}</div>` : ''}
+        ${lessonBox}`;
+      let back = '';
+      if (ui.revealed) {
+        const verdict = !choices || ui.choice == null ? ''
+          : ui.choice === it.answer ? '<span class="chip good">Right</span>' : '<span class="chip again">Not right</span>';
+        back = `<div class="answer"><span class="label">Answer ${verdict}</span>
+          <div class="line">${speakBtn(wbSpoken(it), null, false, 'Play sentence')}<div><p class="nl-mid" lang="nl">${esc(it.answer)}</p></div></div>
+          ${it.alsoGood && it.alsoGood !== it.answer ? `<p class="small">Also good: <span lang="nl">${esc(it.alsoGood)}</span></p>` : ''}
+          ${it.note ? `<p class="small">${esc(it.note)}</p>` : ''}
+          <p class="small">Only tap “Knew it” if you knew it without looking.</p></div>`;
+      }
+      return { body: head + front + back, needsReveal: true, revealLabel: 'Show answer' };
+    }
+
     if (it.type === 'theme') {
       const front = `<p class="nl-big">${esc(it.title)}</p>
         <p>${esc(it.prompt)}</p>
@@ -649,7 +753,10 @@
     const t = today();
     const day = dayRec(t);
     let c = state.cards[id];
-    if (!c) { c = { box: 1, due: t, intro: t, reviews: 0, lapses: 0 }; state.cards[id] = c; day.newCount++; session.newSeen++; }
+    if (!c) {
+      c = { box: 1, due: t, intro: t, reviews: 0, lapses: 0 }; state.cards[id] = c; session.newSeen++;
+      if (ITEM[id] && ITEM[id].part === 'wb') day.wbNew = (day.wbNew || 0) + 1; else day.newCount++;
+    }
     c.reviews = (c.reviews || 0) + 1;
     c.last = t;
     day.reviews++;
@@ -736,6 +843,9 @@
         <div class="field"><label for="set-new">New cards per day</label>
           <select id="set-new" data-setting="newPerDay">${[8, 10, 12, 15, 20, 25, 30].map((n) => `<option value="${n}"${Number(s.newPerDay) === n ? ' selected' : ''}>${n}</option>`).join('')}</select>
           <span class="help">10–15 is a good daily amount. Reviews come on top.</span></div>
+        <div class="field"><label for="set-wb">Workbook cards per day</label>
+          <select id="set-wb" data-setting="wbPerDay">${[0, 3, 5, 8, 10, 15, 20].map((n) => `<option value="${n}"${Number(s.wbPerDay) === n ? ' selected' : ''}>${n === 0 ? 'Off' : n}</option>`).join('')}</select>
+          <span class="help">Exercises from the Naar Nederland workbook, lessons 21–65 and the four tests, in book order. On top of the new cards above.</span></div>
       </section>
 
       <section class="group" aria-labelledby="g-sound"><h2 id="g-sound">Sound</h2>
@@ -784,7 +894,7 @@
               <div class="btn-row"><button class="btn" data-action="reset-cancel">Cancel</button><button class="btn again" data-action="reset-ok">Delete progress</button></div></div>`
           : '<button class="btn quiet" data-action="reset">Reset progress</button>'}
       </section>
-      <p class="small">For educational purposes only. Unofficial app, not affiliated with DUO, the Ministerie van SZW or the IND. KNS questions and photos come from the official photobook <em>Naar Nederland – Fotoboek</em> (© 2014 Ministerie van SZW); all rights stay with the owners.</p>`;
+      <p class="small">For educational purposes only. Unofficial app, not affiliated with DUO, the Ministerie van SZW or the IND. KNS questions and photos come from the official photobook <em>Naar Nederland – Fotoboek</em>, the workbook cards from the official <em>Naar Nederland</em> workbook (both © 2014 Ministerie van SZW); all rights stay with the owners.</p>`;
   }
 
   // ---------------------------------------------------------------- backup
@@ -838,6 +948,8 @@
       case 'reveal': ui.revealed = true; Rec.stop(); render(); break;
       case 'show-text': ui.showText = true; render(); break;
       case 'kns-choose': if (!ui.revealed) { ui.choice = el.dataset.choice; ui.revealed = true; stopSound(); render(); } break;
+      case 'wb-choose': if (!ui.revealed) { ui.choice = el.dataset.choice; ui.revealed = true; stopSound(); render(); } break;
+      case 'wb-text': ui.lessonOpen = !ui.lessonOpen; render(); break;
       case 'grade-good': gradeCurrent(true); break;
       case 'grade-again': gradeCurrent(false); break;
       case 'say': Speech.speak(el.dataset.text, el.dataset.audio); break;
@@ -871,7 +983,7 @@
     const key = el.dataset && el.dataset.setting;
     if (!key) return;
     let v = el.type === 'checkbox' ? el.checked : el.value;
-    if (key === 'newPerDay') v = Number(v);
+    if (key === 'newPerDay' || key === 'wbPerDay') v = Number(v);
     if (key === 'rate') v = Number(v);
     if (key === 'examDate' && !/^\d{4}-\d{2}-\d{2}$/.test(v)) return;
     state.settings[key] = v;
@@ -889,6 +1001,12 @@
     if (!ui.revealed && cur && cur.type === 'kns' && /^[ab]$/i.test(e.key)) {
       ui.choice = e.key.toUpperCase(); ui.revealed = true; stopSound(); render(); return;
     }
+    if (!ui.revealed && cur && cur.type === 'wb' && /^[a-f]$/i.test(e.key)) {
+      const ch = wbChoices(cur);
+      const c = ch && ch[e.key.toUpperCase().charCodeAt(0) - 65];
+      if (c) { ui.choice = c; ui.revealed = true; stopSound(); render(); }
+      return;
+    }
     if (e.key === ' ' || e.key === 'Enter') {
       if (!ui.revealed) { e.preventDefault(); ui.revealed = true; Rec.stop(); render(); }
     } else if (ui.revealed && (e.key === '1' || e.key === 'ArrowLeft')) gradeCurrent(false);
@@ -905,7 +1023,7 @@
   async function boot() {
     try {
       const loaded = await loadContent();
-      buildDecks(loaded.content, loaded.questions);
+      buildDecks(loaded.content, loaded.questions, loaded.workbook);
     } catch (e) {
       $app.innerHTML = `<p class="loading">Could not load the cards. Check your connection and reload.<br><small>${esc(e.message)}</small></p>`;
       return;
@@ -919,6 +1037,6 @@
   }
 
   // exposed for tests
-  window.__mvv = { state: () => state, plan, pickNew, streakInfo, interleave, addDays, diffDays, ITEM };
+  window.__mvv = { state: () => state, plan, pickNew, pickWb, streakInfo, interleave, addDays, diffDays, ITEM, wbChoices, wbPromptHtml, wbSpoken };
   boot();
 })();

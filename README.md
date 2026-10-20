@@ -1,15 +1,15 @@
 # MVV Oefenapp
 
-> **For educational purposes only.** This is an unofficial, non-commercial practice app for the Basisexamen Inburgering Buitenland (civic integration exam abroad). It is not affiliated with or endorsed by DUO, the Ministerie van Sociale Zaken en Werkgelegenheid (SZW), the IND or Naar Nederland. The KNS photos and questions in `assets/` are taken from the official photobook *Naar Nederland – Fotoboek* (herziene editie 2014, © Ministerie van SZW, all rights reserved); all rights stay with the owners. Always check the official material below, as it may have changed. Rights holders who want this material removed can open an issue and it will be taken down.
+> **For educational purposes only.** This is an unofficial, non-commercial practice app for the Basisexamen Inburgering Buitenland (civic integration exam abroad). It is not affiliated with or endorsed by DUO, the Ministerie van Sociale Zaken en Werkgelegenheid (SZW), the IND or Naar Nederland. The KNS photos and questions in `assets/` are taken from the official photobook *Naar Nederland – Fotoboek* (herziene editie 2014, © Ministerie van SZW, all rights reserved), and the workbook exercises in `assets/data/workbook.json` from *Naar Nederland – Nederlands voor anderstaligen*, the workbook (herziene editie, © 2014 Ministerie van SZW, all rights reserved); all rights stay with the owners. Always check the official material below, as it may have changed. Rights holders who want this material removed can open an issue and it will be taken down.
 >
-> **Alleen voor educatieve doeleinden.** Onofficiële, niet-commerciële oefenapp. Niet verbonden aan of goedgekeurd door DUO, het Ministerie van SZW, de IND of Naar Nederland. De KNS-foto's en -vragen komen uit het officiële *Fotoboek* (© 2014 Ministerie van SZW, alle rechten voorbehouden). Raadpleeg altijd het officiële materiaal hieronder.
+> **Alleen voor educatieve doeleinden.** Onofficiële, niet-commerciële oefenapp. Niet verbonden aan of goedgekeurd door DUO, het Ministerie van SZW, de IND of Naar Nederland. De KNS-foto's en -vragen komen uit het officiële *Fotoboek*, de werkboekoefeningen uit het officiële *Werkboek* (beide © 2014 Ministerie van SZW, alle rechten voorbehouden). Raadpleeg altijd het officiële materiaal hieronder.
 
 ## Officiële bronnen / Official sources
 
 | Bron | Link |
 |---|---|
 | Fotoboek KNS (PDF), bron van `assets/` | https://www.naarnederland.nl/site/binaries/site-content/collections/documents/2026/zelfstudiepakket/fotoboek-photobook/nn-fotoboek-2014-herzien-omslag-lowres.pdf |
-| Zelfstudiepakket Naar Nederland (Engels): film, fotoboek, werkboek, audio | https://www.naarnederland.nl/zelfstudiepakket/engels/zelfstudiepakket-engels/zelfstudiepakket-engels |
+| Zelfstudiepakket Naar Nederland (Engels): film, fotoboek, werkboek (bron van `workbook.json`), audio | https://www.naarnederland.nl/zelfstudiepakket/engels/zelfstudiepakket-engels/zelfstudiepakket-engels |
 | Oefenexamens (KNS, Lezen, Spreken) | https://english.naarnederland.nl/taking-practice-exams · https://www.naarnederland.nl/oefenexamens-maken |
 | Alle spreekvragen A1 (PDF) | https://www.naarnederland.nl/site/binaries/site-content/collections/documents/2026/examens/spreken-a1-maart-2024/totaalbestand-items-spreken-a1-maart-2024.pdf |
 | Beoordelingsmodel Spreekvaardigheid A1 (PDF) | https://www.naarnederland.nl/site/binaries/site-content/collections/documents/2026/examens/beoordelingsmodel-spreekvaardigheid/beoordelingsmodel-spreekvaardigheid-a1.pdf |
@@ -19,7 +19,7 @@ De woorden, spreekvragen, modelantwoorden en KNS-thema's in `content.json` zijn 
 
 ## Over de app
 
-Een kleine oefenapp (PWA) voor het Basisexamen Inburgering Buitenland. Eén dagelijkse sessie van 10–15 minuten met drie soorten kaarten: KNS-tracker, Spreken en Woorden. Herhaling via Leitner (5 dozen). Uitleg in het Engels, inhoud in het Nederlands. Lezen zit er bewust niet in; daarvoor verwijst de app naar het officiële DUO-oefenexamen.
+Een kleine oefenapp (PWA) voor het Basisexamen Inburgering Buitenland. Eén dagelijkse sessie van 10–15 minuten met vier soorten kaarten: KNS (fotoboek), Spreken, Woorden en Werkboek. Herhaling via Leitner (5 dozen). Uitleg in het Engels, inhoud in het Nederlands. Lezen zit er bewust niet in; daarvoor verwijst de app naar het officiële DUO-oefenexamen.
 
 ## Bestanden
 
@@ -32,6 +32,8 @@ Een kleine oefenapp (PWA) voor het Basisexamen Inburgering Buitenland. Eén dage
 | `assets/data/questions.json` | De 100 KNS-vragen (+ 2 voorbeeldvragen) uit het fotoboek, met antwoord en foto |
 | `assets/images/` | De foto's uit het fotoboek: `q001.jpg` … `q100.jpg`, `vb01.jpg`, `vb02.jpg` |
 | `tools/extract_photobook.py` | Script dat de twee hierboven maakt uit de fotoboek-PDF |
+| `assets/data/workbook.json` | 1603 oefeningen uit het werkboek (les 21–65 en de vier tussentoetsen), met antwoord en lestekst |
+| `tools/extract_workbook.py` | Script dat `workbook.json` maakt uit de werkboek-PDF |
 | `sw.js` | Service worker voor offline gebruik |
 | `manifest.webmanifest`, `icons/` | Installeren op het beginscherm |
 
@@ -102,6 +104,37 @@ Een record in `questions.json`:
 
 De foto's en vragen blijven © Ministerie van SZW; zie de disclaimer bovenaan. De PDF zelf staat niet in deze repo. Download hem via de link onder *Officiële bronnen*.
 
+### Werkboekoefeningen opnieuw maken uit het werkboek
+
+Nodig: Python 3 en de PDF `nn-werkboek-2015-herzien-omslag-lowres.pdf` (uit het zelfstudiepakket).
+
+```bash
+cd mvv-app
+pip install pdfplumber
+python tools/extract_workbook.py ../nn-werkboek-2015-herzien-omslag-lowres.pdf
+```
+
+Het script (duurt ongeveer een halve minuut):
+
+- leest les 21–65 en de vier tussentoetsen: de lestekst (dialoog) en elke opgave, met keuzes en woordrijtje;
+- haalt de antwoorden uit het hoofdstuk *Antwoorden* achter in het boek;
+- schrijft `assets/data/workbook.json`, in de volgorde van het boek;
+- stopt met een foutmelding als het aantal opgaven niet klopt met het aantal antwoorden, als een antwoord niet bij de keuzes staat, of als een woord uit een woordrijtje niet precies één keer gebruikt wordt;
+- laat persoonlijke vragen ("Hoe laat neem jij ontbijt?") weg: daar staat geen antwoord voor in het boek;
+- gebruikt les 1–20 niet (klanken en spelling, die werken alleen met de cd).
+
+Op drie plekken zeggen het boek en het antwoordenboek iets anders (bijv. les 32: woordrijtje "vol", antwoord "nogal"). Die staan met uitleg in `KNOWN_DIFFERENCES` in het script; de app toont dan het woord uit het boek en een korte opmerking. Een nieuwe versie van het boek wordt opnieuw gecontroleerd: een verschil dat nog niet in de lijst staat, stopt het script.
+
+Een record in `workbook.json`:
+
+```json
+{"id": "w26-3-2", "lesson": 26, "test": null, "exercise": "3", "extra": false, "kind": "match",
+ "instruction": "Trek een lijn naar het goede antwoord.", "prompt": "Daar zijn twee… vrij.",
+ "answer": "stoelen", "page": 140, "choices": ["tafel", "stoelen", "zoveel", "kop"]}
+```
+
+`kind` is `choice` (omcirkelen, waar/niet waar), `match` (lijn trekken), `fill` (woordrijtje, tegenstelling) of `recall` (geen keuzes in het boek: zeg het antwoord en kijk dan). `extra` is het sterretjesdeel van een oefening. Ids: `w<les>-<oefening>-<nr>`, `w<les>-<oefening>x-<nr>` voor het sterretjesdeel, `t<toets>-<deel>-<nr>` voor tussentoetsen. Houd ze gelijk, anders raakt de voortgang kwijt. Verhoog na het opnieuw maken `VERSION` in `sw.js`.
+
 Houd de `id` van een kaart gelijk als je de tekst aanpast, anders raakt de voortgang van die kaart kwijt. Nieuwe kaarten krijgen een nieuwe id.
 
 ### Eigen opnames in plaats van de voorleesstem
@@ -118,6 +151,7 @@ Velden: `audio` (voorkant), `modelAudio` (modelantwoord), `exAudio` (voorbeeldzi
 
 - **Leitner, 5 dozen.** Nieuwe kaart = doos 1. *Knew it* → volgende doos; terug na 1, 2, 4 en 7 dagen. *Not yet* → terug naar doos 1 en de kaart komt in dezelfde sessie terug (na 3 andere kaarten) tot hij één keer goed is.
 - **Nieuwe kaarten:** standaard 15 per dag (instelbaar). KNS en Spreken krijgen voorrang op Woorden. Maximaal 60 herhalingen per sessie; de rest schuift door.
+- **Werkboek:** daarbovenop standaard 5 nieuwe werkboekkaarten per dag (Settings → *Workbook cards per day*, 0 = uit), in de volgorde van het boek: les 21 eerst, de tussentoetsen na les 35, 45, 55 en 65. Bij elke kaart kun je de lestekst openen. Herhalen gaat met dezelfde Leitner-dozen als de andere kaarten.
 - **Vanaf 3 dagen voor het examen:** geen nieuwe kaarten meer, alleen herhalen.
 - **Streak:** dagen achter elkaar met een afgeronde sessie. Eén gemiste dag per week wordt vergeven (hersteldag).
 - **Opnames** blijven alleen in het geheugen en worden nergens opgeslagen.
