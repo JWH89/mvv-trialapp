@@ -1,0 +1,232 @@
+{
+  "id": "verbs-present",
+  "title": "Verbs: present",
+  "nl": "Werkwoorden: tegenwoordige tijd",
+  "intro": "How verbs change for ik, jij, hij, and the special groups: modal verbs, separable verbs, commands.",
+  "topics": [
+    {
+      "id": "present-regular",
+      "title": "Present tense: regular verbs",
+      "nl": "De tegenwoordige tijd",
+      "level": "A1",
+      "summary": "ik werk, jij werkt, wij werken — and werk jij?",
+      "body": [
+        {"p": "Find the **stem**: take the infinitive and remove **-en**, then apply the spelling rules (werken → werk, maken → maak, zitten → zit, leven → leef)."},
+        {"table": {"head": ["", "werken", "maken", "zitten"], "rows": [
+          ["ik", "werk", "maak", "zit"],
+          ["jij / je", "werk**t**", "maak**t**", "zit"],
+          ["u", "werk**t**", "maak**t**", "zit"],
+          ["hij / zij / het", "werk**t**", "maak**t**", "zit"],
+          ["wij / jullie / zij", "werk**en**", "mak**en**", "zitt**en**"]
+        ]}},
+        {"list": [
+          "ik = stem",
+          "jij, u, hij, zij, het = stem + **t** (no extra t if the stem ends in t: hij zit)",
+          "plural = the infinitive"
+        ]},
+        {"h": "The jij-rule"},
+        {"p": "When **jij/je comes after the verb**, the -t disappears: **Werk jij** morgen? Morgen **werk je** thuis. This only happens with jij/je, not with u or hij: **Werkt u** morgen?"},
+        {"h": "Stem ending in d"},
+        {"p": "The stem is written as it is, so with hij you get **dt**: worden → hij **wordt**, vinden → zij **vindt**. It sounds like a t. With inverted jij: **Vind jij** het leuk?"},
+        {"tip": "The present tense also covers ‘I am working’ and plans: Ik **werk** nu. Morgen **ga** ik naar Utrecht."}
+      ],
+      "mistakes": [
+        {"wrong": "Werkt jij morgen?", "right": "Werk jij morgen?", "why": "jij after the verb: no -t."},
+        {"wrong": "Hij vind het leuk.", "right": "Hij vindt het leuk.", "why": "stem vind + t = vindt."},
+        {"wrong": "Ik werkt.", "right": "Ik werk.", "why": "ik takes only the stem."}
+      ],
+      "exercises": [
+        {"id": "pr-1", "t": "type", "q": "Hij ___ in Amsterdam. (wonen)", "a": ["woont"], "why": "hij = stem woon + t."},
+        {"id": "pr-2", "t": "type", "q": "___ jij vandaag? (werken)", "a": ["werk"], "why": "jij after the verb: no -t."},
+        {"id": "pr-3", "t": "choice", "q": "Zij ___ het een mooie stad. (vinden)", "en": "She thinks it is a beautiful city.", "opts": ["vindt", "vind", "vint"], "a": "vindt", "why": "stem vind + t."},
+        {"id": "pr-4", "t": "type", "q": "Wij ___ Nederlands. (leren)", "a": ["leren"], "why": "wij = the infinitive."},
+        {"id": "pr-5", "t": "type", "q": "Ik ___ een brief. (schrijven)", "a": ["schrijf"], "why": "Stem: schrijv → schrijf (never end in v)."},
+        {"id": "pr-6", "t": "choice", "q": "___ u in Rotterdam? (wonen)", "opts": ["Woont", "Woon", "Wonen"], "a": "Woont", "why": "The jij-rule is only for jij/je, so u keeps the t."}
+      ],
+      "write": ["Write three sentences about your normal day (ik werk, ik eet …)."]
+    },
+    {
+      "id": "present-irregular",
+      "title": "zijn, hebben and other irregular verbs",
+      "nl": "Onregelmatige werkwoorden (tegenwoordige tijd)",
+      "level": "A1",
+      "summary": "ik ben, jij bent, hij is; ik heb, hij heeft; ik kan, ik wil, ik mag.",
+      "body": [
+        {"table": {"head": ["", "zijn", "hebben", "gaan", "komen", "doen"], "rows": [
+          ["ik", "ben", "heb", "ga", "kom", "doe"],
+          ["jij", "bent (ben jij)", "hebt (heb jij)", "gaat", "komt", "doet"],
+          ["u", "bent", "hebt / heeft", "gaat", "komt", "doet"],
+          ["hij/zij/het", "is", "heeft", "gaat", "komt", "doet"],
+          ["wij/jullie/zij", "zijn", "hebben", "gaan", "komen", "doen"]
+        ]}},
+        {"table": {"head": ["", "kunnen", "willen", "mogen", "zullen"], "rows": [
+          ["ik", "kan", "wil", "mag", "zal"],
+          ["jij", "kunt / kan", "wilt / wil", "mag", "zult / zal"],
+          ["u", "kunt", "wilt", "mag", "zult"],
+          ["hij/zij/het", "kan", "wil", "mag", "zal"],
+          ["wij/jullie/zij", "kunnen", "willen", "mogen", "zullen"]
+        ]}},
+        {"p": "**staan** and **slaan** go like gaan: ik sta, hij staat."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik heeft een auto.", "right": "Ik heb een auto.", "why": "ik heb, hij heeft."},
+        {"wrong": "Hij zijn moe.", "right": "Hij is moe.", "why": "hij is."}
+      ],
+      "exercises": [
+        {"id": "pi-1", "t": "type", "q": "Mijn zus ___ twee kinderen. (hebben)", "a": ["heeft"], "why": "hij/zij → heeft."},
+        {"id": "pi-2", "t": "choice", "q": "___ jij moe?", "opts": ["Ben", "Bent", "Is"], "a": "Ben", "why": "jij after the verb: ben jij."},
+        {"id": "pi-3", "t": "type", "q": "Ik ___ morgen naar de markt. (gaan)", "a": ["ga"], "why": "ik ga."},
+        {"id": "pi-4", "t": "choice", "q": "Hij ___ goed koken.", "opts": ["kan", "kunt", "kant"], "a": "kan", "why": "hij kan."}
+      ],
+      "write": []
+    },
+    {
+      "id": "modals",
+      "title": "Modal verbs: kunnen, moeten, mogen, willen",
+      "nl": "Modale werkwoorden",
+      "level": "A1",
+      "summary": "Ik moet morgen werken. The second verb goes to the end.",
+      "body": [
+        {"table": {"head": ["verb", "meaning", "example"], "rows": [
+          ["kunnen", "can, be able to", "Ik **kan** goed **zwemmen**."],
+          ["moeten", "must, have to", "Je **moet** je paspoort **meenemen**."],
+          ["mogen", "may, be allowed to", "Hier **mag** je niet **roken**."],
+          ["willen", "want", "Ik **wil** Nederlands **leren**."],
+          ["zullen", "will / shall", "Ik **zal** je **helpen**. **Zullen** we **gaan**?"]
+        ]}},
+        {"p": "The modal verb is in position 2; the **infinitive goes to the end** of the sentence. No ‘te’."},
+        {"h": "Not have to: niet hoeven te"},
+        {"p": "‘Niet moeten’ is unusual. To say you **don't have to**, use **niet hoeven te**: Je **hoeft** morgen **niet te** werken."},
+        {"p": "A modal can stand alone when the meaning is clear: Ik **kan** Nederlands. Dat **mag** niet. Ik **wil** een koffie."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik wil leren Nederlands.", "right": "Ik wil Nederlands leren.", "why": "Infinitive at the end."},
+        {"wrong": "Ik moet te werken.", "right": "Ik moet werken.", "why": "No te after a modal."},
+        {"wrong": "Je moet niet werken morgen. (= you don't have to)", "right": "Je hoeft morgen niet te werken.", "why": "Not have to = niet hoeven te."}
+      ],
+      "exercises": [
+        {"id": "mo-1", "t": "order", "en": "I want to learn Dutch.", "a": ["Ik wil Nederlands leren."], "why": "Modal in position 2, infinitive at the end."},
+        {"id": "mo-2", "t": "choice", "q": "Je ___ hier niet roken.", "en": "You are not allowed to smoke here.", "opts": ["mag", "kan", "wil"], "a": "mag", "why": "mogen = be allowed."},
+        {"id": "mo-3", "t": "choice", "q": "Je hoeft morgen niet ___.", "en": "You don't have to work tomorrow.", "opts": ["te werken", "werken", "gewerkt"], "a": "te werken", "why": "hoeven needs te + infinitive."},
+        {"id": "mo-4", "t": "translate", "q": "I have to work tomorrow.", "a": ["Ik moet morgen werken.", "Morgen moet ik werken."], "why": "moet in position 2, werken at the end."},
+        {"id": "mo-5", "t": "choice", "q": "___ we morgen samen eten?", "en": "Shall we eat together tomorrow?", "opts": ["Zullen", "Willen", "Moeten"], "a": "Zullen", "why": "Zullen we …? = a suggestion."}
+      ],
+      "write": ["Write what you must do and what you want to do this week (moeten, willen)."]
+    },
+    {
+      "id": "imperative",
+      "title": "Commands",
+      "nl": "De gebiedende wijs",
+      "level": "A1",
+      "summary": "Kom binnen! Wacht even. Komt u maar binnen.",
+      "body": [
+        {"p": "The command form is the **stem**, and the verb goes first: **Kom** binnen! **Wacht** even. **Doe** de deur dicht."},
+        {"p": "Polite: stem + **t** + **u**: **Komt u** binnen. **Neemt u** plaats. Even more polite is a question: **Kunt u** even wachten?"},
+        {"p": "Small words make it friendlier: **maar** (go ahead), **even** (just quickly), **eens** (just): Kom **maar** binnen. Kijk **eens**."},
+        {"p": "zijn → **Wees** voorzichtig! On signs you often see the infinitive: **Niet roken**."}
+      ],
+      "mistakes": [
+        {"wrong": "Jij komt binnen!", "right": "Kom binnen!", "why": "A command has no subject (except polite u)."}
+      ],
+      "exercises": [
+        {"id": "im-1", "t": "type", "q": "___ even! (wachten)", "a": ["wacht"], "why": "Command = stem."},
+        {"id": "im-2", "t": "choice", "q": "Polite: ___ u plaats.", "opts": ["Neemt", "Neem", "Nemen"], "a": "Neemt", "why": "Polite: stem + t + u."},
+        {"id": "im-3", "t": "choice", "q": "___ voorzichtig! (zijn)", "opts": ["Wees", "Ben", "Zijn"], "a": "Wees", "why": "The command of zijn is wees."}
+      ],
+      "write": []
+    },
+    {
+      "id": "separable",
+      "title": "Separable verbs",
+      "nl": "Scheidbare werkwoorden",
+      "level": "A2",
+      "summary": "opbellen → Ik bel je morgen op.",
+      "body": [
+        {"p": "Many verbs start with a small word like **op, mee, aan, uit, af, terug, weg, schoon**: opbellen, meenemen, aankomen, uitgaan. The stress is on that first part: **OP**bellen."},
+        {"p": "In a main clause the verb is in position 2 and the **small part goes to the end**:"},
+        {"ex": [
+          ["Ik bel je morgen op.", "I'll call you tomorrow."],
+          ["De trein komt om acht uur aan.", "The train arrives at eight."],
+          ["Neem je paraplu mee!", "Take your umbrella!"]
+        ]},
+        {"p": "When the whole verb is at the end, it stays together:"},
+        {"table": {"head": ["", "example"], "rows": [
+          ["with a modal", "Ik wil je morgen **opbellen**."],
+          ["perfect (ge in the middle)", "Ik heb je **opgebeld**."],
+          ["te (in the middle)", "Ik vergeet je **op te bellen**."],
+          ["subordinate clause", "… omdat ik je morgen **opbel**."]
+        ]}},
+        {"h": "Not separable"},
+        {"p": "Verbs starting with **be-, ge-, her-, ont-, ver-, er-** never split, and the stress is not on the first part: beTALen, verTELlen, herHAlen, ontBIJten. Perfect without ge-: ik heb **betaald**, **verteld**."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik opbel je morgen.", "right": "Ik bel je morgen op.", "why": "In a main clause the part goes to the end."},
+        {"wrong": "Ik heb je geopbeld.", "right": "Ik heb je opgebeld.", "why": "ge- goes in the middle."},
+        {"wrong": "Ik taal de rekening be.", "right": "Ik betaal de rekening.", "why": "be- verbs never split."}
+      ],
+      "exercises": [
+        {"id": "se-1", "t": "order", "en": "I'll call you tomorrow.", "a": ["Ik bel je morgen op."], "why": "bel in position 2, op at the end."},
+        {"id": "se-2", "t": "type", "q": "Ik heb mijn paraplu ___. (meenemen, perfect)", "a": ["meegenomen"], "why": "mee + ge + nomen."},
+        {"id": "se-3", "t": "choice", "q": "Hoe laat ___ de trein ___?", "en": "What time does the train arrive?", "opts": ["komt … aan", "aankomt … —", "kom … aan"], "a": "komt … aan", "why": "komt in position 2 after the question word, aan at the end."},
+        {"id": "se-4", "t": "rewrite", "q": "Ik ruim mijn kamer op.", "task": "Start with: Ik moet …", "a": ["Ik moet mijn kamer opruimen."], "why": "With a modal the verb stays together at the end."},
+        {"id": "se-5", "t": "choice", "q": "Ik heb de rekening ___.", "opts": ["betaald", "gebetaald", "begetaald"], "a": "betaald", "why": "be- verbs get no ge-."}
+      ],
+      "write": ["Write what time you get up and when you go out (opstaan, uitgaan)."]
+    },
+    {
+      "id": "kennen-weten",
+      "title": "kennen or weten",
+      "nl": "Kennen en weten",
+      "level": "A2",
+      "summary": "Both are ‘to know’. kennen people and places, weten facts.",
+      "body": [
+        {"table": {"head": ["", "use", "example"], "rows": [
+          ["kennen", "people, places, things you are familiar with", "Ik **ken** zijn moeder. **Ken** je Utrecht?"],
+          ["weten", "facts, answers; before dat, of, waar, hoe …", "Ik **weet** het niet. **Weet** jij waar hij woont?"]
+        ]}},
+        {"p": "weten: ik weet, jij/hij weet (no -t!), wij weten. Perfect: ik heb het **geweten**; past: ik **wist**."},
+        {"p": "**kunnen** for languages and skills: Ik **kan** Nederlands. Also **kennen** a language: Ik ken een beetje Nederlands."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik ken niet waar hij woont.", "right": "Ik weet niet waar hij woont.", "why": "A fact or a ‘where’ clause → weten."},
+        {"wrong": "Hij weett het.", "right": "Hij weet het.", "why": "No extra t: hij weet."}
+      ],
+      "exercises": [
+        {"id": "kw-1", "t": "choice", "q": "___ jij mijn broer?", "opts": ["Ken", "Weet"], "a": "Ken", "why": "A person → kennen."},
+        {"id": "kw-2", "t": "choice", "q": "Ik ___ niet hoe laat het is.", "opts": ["weet", "ken"], "a": "weet", "why": "A fact / ‘how late’ → weten."},
+        {"id": "kw-3", "t": "choice", "q": "Ik ___ dat hij ziek is.", "opts": ["weet", "ken"], "a": "weet", "why": "Before dat → weten."}
+      ],
+      "write": []
+    },
+    {
+      "id": "position-verbs",
+      "title": "staan, liggen, zitten, hangen",
+      "nl": "Positiewerkwoorden",
+      "level": "A2",
+      "summary": "Dutch says where things are with stand, lie, sit, hang.",
+      "body": [
+        {"p": "Where English says ‘is’, Dutch often says **how** something is there:"},
+        {"table": {"head": ["verb", "when", "example"], "rows": [
+          ["staan", "upright, or on its base; also text in a document", "De fles **staat** in de koelkast. Het **staat** in de krant."],
+          ["liggen", "flat; also cities and places", "Het boek **ligt** op tafel. Utrecht **ligt** in het midden."],
+          ["zitten", "inside something closed; people sitting", "De sleutel **zit** in mijn tas."],
+          ["hangen", "hanging", "De jas **hangt** aan de kapstok."]
+        ]}},
+        {"p": "To **put** something there, use: **zetten** (stand it), **leggen** (lay it), **stoppen** (put inside), **hangen** (hang it)."},
+        {"ex": [
+          ["Zet de borden op tafel.", "Put the plates on the table."],
+          ["Ik leg de krant op de bank.", "I put the newspaper on the couch."]
+        ]}
+      ],
+      "mistakes": [
+        {"wrong": "Het boek is op tafel.", "right": "Het boek ligt op tafel.", "why": "Not wrong, but Dutch speakers say ligt."}
+      ],
+      "exercises": [
+        {"id": "ps-1", "t": "choice", "q": "De melk ___ in de koelkast.", "opts": ["staat", "ligt", "hangt"], "a": "staat", "why": "A pack or bottle stands upright."},
+        {"id": "ps-2", "t": "choice", "q": "Mijn telefoon ___ in mijn jaszak.", "opts": ["zit", "staat", "ligt"], "a": "zit", "why": "Inside something closed → zitten."},
+        {"id": "ps-3", "t": "choice", "q": "___ de krant maar op tafel.", "opts": ["Leg", "Zet", "Ligt"], "a": "Leg", "why": "Put something flat → leggen."}
+      ],
+      "write": []
+    }
+  ]
+}

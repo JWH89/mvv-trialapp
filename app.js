@@ -509,7 +509,9 @@
       </section>
       ${pace}
       <div class="aside"><p><strong>Reading (Lezen) is not in this app.</strong> Practise it with the free official practice exam, on a laptop.</p>
-        <p><a href="${LINKS.practiceEn}" target="_blank" rel="noopener">Open the practice exams</a></p></div>`;
+        <p><a href="${LINKS.practiceEn}" target="_blank" rel="noopener">Open the practice exams</a></p></div>
+      <div class="aside"><p><strong>Grammar:</strong> lessons in English with self-checking exercises.</p>
+        <p><a href="grammatica/">Open Grammatica</a></p></div>`;
   }
 
   function extraButtons(taper) {

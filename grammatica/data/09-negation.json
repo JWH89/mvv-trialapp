@@ -1,0 +1,103 @@
+{
+  "id": "negation",
+  "title": "Negation",
+  "nl": "Ontkenning",
+  "intro": "niet or geen, where niet goes, and nooit, niemand, nog niet, niet meer.",
+  "topics": [
+    {
+      "id": "niet-geen",
+      "title": "niet or geen",
+      "nl": "Niet of geen",
+      "level": "A1",
+      "summary": "geen replaces een or no article. Everything else: niet.",
+      "body": [
+        {"p": "Use **geen** when the noun has **een** or **no article**. It means ‘no / not a / not any’."},
+        {"table": {"head": ["positive", "negative"], "rows": [
+          ["Ik heb **een** auto.", "Ik heb **geen** auto."],
+          ["Ik drink koffie.", "Ik drink **geen** koffie."],
+          ["Ik heb kinderen.", "Ik heb **geen** kinderen."]
+        ]}},
+        {"p": "Use **niet** in all other cases: with **de/het/mijn/deze** + noun, names, pronouns, verbs, adjectives."},
+        {"table": {"head": ["positive", "negative"], "rows": [
+          ["Ik heb **de** auto.", "Ik heb de auto **niet**."],
+          ["Ik werk.", "Ik werk **niet**."],
+          ["Het is duur.", "Het is **niet** duur."],
+          ["Ik ken hem.", "Ik ken hem **niet**."]
+        ]}}
+      ],
+      "mistakes": [
+        {"wrong": "Ik heb niet een auto.", "right": "Ik heb geen auto.", "why": "niet + een → geen."},
+        {"wrong": "Ik drink niet koffie.", "right": "Ik drink geen koffie.", "why": "No article → geen."},
+        {"wrong": "Ik heb geen de sleutel.", "right": "Ik heb de sleutel niet.", "why": "With de → niet."}
+      ],
+      "exercises": [
+        {"id": "ng-1", "t": "choice", "q": "Ik heb ___ tijd.", "opts": ["geen", "niet"], "a": "geen", "why": "tijd without article → geen."},
+        {"id": "ng-2", "t": "choice", "q": "Ik ken die man ___.", "opts": ["niet", "geen"], "a": "niet", "why": "die man (with die) → niet."},
+        {"id": "ng-3", "t": "choice", "q": "Het eten is ___ lekker.", "opts": ["niet", "geen"], "a": "niet", "why": "Adjective → niet."},
+        {"id": "ng-4", "t": "rewrite", "q": "Ik heb een fiets.", "task": "Make it negative.", "a": ["Ik heb geen fiets."], "why": "een → geen."},
+        {"id": "ng-5", "t": "translate", "q": "We don't have children.", "a": ["We hebben geen kinderen.", "Wij hebben geen kinderen."], "why": "No article → geen."}
+      ],
+      "write": ["Write three things you don't have or don't do (geen / niet)."]
+    },
+    {
+      "id": "niet-position",
+      "title": "Where does niet go?",
+      "nl": "De plaats van niet",
+      "level": "A2",
+      "summary": "Near the end, before the second verb. Before adjectives and most prepositions.",
+      "body": [
+        {"list": [
+          "**At the end** of a simple sentence: Ik werk **niet**. Ik zie hem **niet**. Ik koop het boek **niet**.",
+          "After time words: Ik werk vandaag **niet**.",
+          "**Before the second verb** or separable part: Ik kan **niet** komen. Ik heb het **niet** gezien. Ik bel je **niet** op.",
+          "**Before an adjective or manner word**: Het is **niet** duur. Hij rijdt **niet** snel.",
+          "**Before most phrases with a preposition**: Ik woon **niet** in Amsterdam. Ik ga **niet** naar school."
+        ]},
+        {"p": "To contrast, put niet before the word you deny: Ik heb **niet** Jan gezien, maar Piet."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik niet werk.", "right": "Ik werk niet.", "why": "The verb stays in position 2."},
+        {"wrong": "Ik kan komen niet.", "right": "Ik kan niet komen.", "why": "niet before the second verb."},
+        {"wrong": "Ik woon in Amsterdam niet.", "right": "Ik woon niet in Amsterdam.", "why": "niet before the place."}
+      ],
+      "exercises": [
+        {"id": "np-1", "t": "order", "en": "I can't come tomorrow.", "a": ["Ik kan morgen niet komen.", "Morgen kan ik niet komen."], "why": "niet right before komen."},
+        {"id": "np-2", "t": "order", "en": "I didn't see him.", "a": ["Ik heb hem niet gezien."], "why": "Pronoun early, niet before the participle."},
+        {"id": "np-3", "t": "choice", "q": "Which sentence is correct?", "opts": ["De soep is niet warm.", "De soep is warm niet.", "De soep niet is warm."], "a": "De soep is niet warm.", "why": "niet before an adjective."},
+        {"id": "np-4", "t": "rewrite", "q": "Ik woon in Rotterdam.", "task": "Make it negative.", "a": ["Ik woon niet in Rotterdam."], "why": "niet before the place with in."}
+      ],
+      "write": []
+    },
+    {
+      "id": "other-negatives",
+      "title": "nooit, niemand, niets, nog niet, niet meer",
+      "nl": "Andere ontkenningen",
+      "level": "A2",
+      "summary": "never, nobody, nothing, not yet, no longer.",
+      "body": [
+        {"table": {"head": ["positive", "negative", "example"], "rows": [
+          ["altijd (always)", "**nooit** (never)", "Ik rook **nooit**."],
+          ["iemand (someone)", "**niemand** (nobody)", "Er is **niemand** thuis."],
+          ["iets (something)", "**niets / niks** (nothing)", "Ik heb **niets** gegeten."],
+          ["ergens (somewhere)", "**nergens** (nowhere)", "Ik kan mijn sleutels **nergens** vinden."],
+          ["al (already)", "**nog niet** (not yet)", "Ik heb **nog niet** gegeten."],
+          ["nog (still)", "**niet meer** (no longer)", "Ik woon daar **niet meer**."],
+          ["al een … (already a …)", "**nog geen** (not … yet)", "Ik heb **nog geen** baan."],
+          ["nog een … (still a …)", "**geen … meer** (no more)", "Er is **geen** melk **meer**."]
+        ]}},
+        {"p": "Dutch never uses two negatives together: Ik heb **niets** gezien (not: niet niets)."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik heb niet niets gezien.", "right": "Ik heb niets gezien.", "why": "One negative only."},
+        {"wrong": "Ik woon daar niet nog.", "right": "Ik woon daar niet meer.", "why": "no longer = niet meer."}
+      ],
+      "exercises": [
+        {"id": "on-1", "t": "choice", "q": "Is je zus er al? — Nee, ze is er ___.", "opts": ["nog niet", "niet meer", "nooit"], "a": "nog niet", "why": "not yet → nog niet."},
+        {"id": "on-2", "t": "choice", "q": "Er is ___ brood ___. We moeten naar de winkel.", "opts": ["geen … meer", "niet … meer", "nog … niet"], "a": "geen … meer", "why": "No more of a noun → geen … meer."},
+        {"id": "on-3", "t": "choice", "q": "Ik heb ___ gehoord.", "en": "I heard nothing.", "opts": ["niets", "niet iets", "niet niets"], "a": "niets", "why": "nothing = niets."},
+        {"id": "on-4", "t": "translate", "q": "I no longer smoke.", "a": ["Ik rook niet meer."], "why": "no longer = niet meer."}
+      ],
+      "write": []
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "id": "verbs-more",
+  "title": "Verbs: more forms",
+  "nl": "Werkwoorden: meer vormen",
+  "intro": "Future, ‘I am doing’, te + infinitive, would, the passive, verb groups and laten.",
+  "topics": [
+    {
+      "id": "future",
+      "title": "The future",
+      "nl": "De toekomst",
+      "level": "A2",
+      "summary": "Mostly the present tense. Also gaan + infinitive and zullen.",
+      "body": [
+        {"table": {"head": ["form", "use", "example"], "rows": [
+          ["present + time word", "the most common way", "Ik **bel** je **morgen**."],
+          ["gaan + infinitive", "plans and things you expect", "Ik **ga** volgend jaar **verhuizen**. Het **gaat regenen**."],
+          ["zullen + infinitive", "promises, predictions, formal style", "Ik **zal** het niet **vergeten**. Het **zal** wel goed **komen**."],
+          ["Zullen we …?", "a suggestion", "**Zullen** we koffie **drinken**?"]
+        ]}},
+        {"p": "Don't overuse zullen. ‘I will call you tomorrow’ is simply **Ik bel je morgen**."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik zal morgen naar de dokter gaan. (normal plan)", "right": "Ik ga morgen naar de dokter.", "why": "For a normal plan, the present tense is more natural."}
+      ],
+      "exercises": [
+        {"id": "fu-1", "t": "choice", "q": "Kijk die wolken! Het ___ regenen.", "opts": ["gaat", "zal", "wil"], "a": "gaat", "why": "Something you expect from what you see → gaan."},
+        {"id": "fu-2", "t": "choice", "q": "___ we vanavond pizza eten?", "en": "Shall we eat pizza tonight?", "opts": ["Zullen", "Gaan", "Willen"], "a": "Zullen", "why": "A suggestion → Zullen we …?"},
+        {"id": "fu-3", "t": "translate", "q": "I'll call you tomorrow.", "a": ["Ik bel je morgen.", "Ik bel jou morgen.", "Morgen bel ik je.", "Ik bel je morgen op.", "Morgen bel ik je op.", "Ik zal je morgen bellen."], "why": "The present tense with morgen is enough."}
+      ],
+      "write": ["Write about your plans for next year (gaan + infinitive)."]
+    },
+    {
+      "id": "progressive",
+      "title": "‘I am doing’: aan het + infinitive",
+      "nl": "Aan het + infinitief, zitten te",
+      "level": "A2",
+      "summary": "Ik ben aan het koken. Hij zit te lezen.",
+      "body": [
+        {"p": "The normal present already means ‘I am doing’. To stress that you are **busy doing** something right now:"},
+        {"table": {"head": ["form", "example"], "rows": [
+          ["zijn + **aan het** + infinitive", "Ik **ben aan het koken**. Ze **zijn** het huis **aan het schoonmaken**."],
+          ["zitten / staan / liggen / lopen + **te** + infinitive", "Hij **zit te lezen**. Ze **staat te wachten**. Ik **lig te slapen**."]
+        ]}},
+        {"p": "The second form also tells you the position. In the perfect it becomes a double infinitive: Hij **heeft** de hele dag **zitten lezen**."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik ben koken.", "right": "Ik ben aan het koken.", "why": "You need aan het."},
+        {"wrong": "Hij zit lezen.", "right": "Hij zit te lezen.", "why": "zitten needs te here."}
+      ],
+      "exercises": [
+        {"id": "pg-1", "t": "choice", "q": "Stoor me niet, ik ben ___.", "opts": ["aan het werken", "werken", "te werken"], "a": "aan het werken", "why": "zijn + aan het + infinitive."},
+        {"id": "pg-2", "t": "choice", "q": "Oma zit in de tuin een boek ___.", "opts": ["te lezen", "lezen", "aan het lezen"], "a": "te lezen", "why": "zitten + te + infinitive."},
+        {"id": "pg-3", "t": "translate", "q": "We are eating.", "a": ["We zijn aan het eten.", "Wij zijn aan het eten.", "We eten.", "Wij eten.", "We zitten te eten.", "Wij zitten te eten."], "why": "zijn aan het eten (or simply: we eten)."}
+      ],
+      "write": []
+    },
+    {
+      "id": "te-infinitive",
+      "title": "te + infinitive and om … te",
+      "nl": "Te + infinitief, om … te",
+      "level": "B1",
+      "summary": "Ik probeer te slapen. Ik ga naar school om Nederlands te leren.",
+      "body": [
+        {"h": "Verbs with te"},
+        {"p": "Many verbs take **te** + infinitive, always at the end: **proberen, beginnen, vergeten, beloven, hopen, besluiten, durven, weigeren**."},
+        {"ex": [
+          ["Ik probeer elke dag Nederlands te spreken.", "I try to speak Dutch every day."],
+          ["Vergeet niet de deur dicht te doen.", "Don't forget to close the door."]
+        ]},
+        {"h": "No te"},
+        {"p": "Never te after **modal verbs** (kunnen, moeten, mogen, willen, zullen), **gaan, komen, blijven, laten, zien, horen**: Ik **ga** slapen. Hij **komt** eten."},
+        {"h": "om … te: purpose (in order to)"},
+        {"p": "**om** + the rest + **te** + infinitive: Ik ga naar Nederland **om** bij mijn man **te** wonen. Also after adjectives and nouns: Het is leuk **om** Nederlands **te** leren. Ik heb geen tijd **om te** koken."},
+        {"p": "Also: **zonder te** (without -ing), **in plaats van te** (instead of), **door te** (by -ing): Hij ging weg **zonder** iets **te** zeggen."},
+        {"p": "Separable verbs: te in the middle: **op te bellen**, **mee te nemen**."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik probeer slapen.", "right": "Ik probeer te slapen.", "why": "proberen needs te."},
+        {"wrong": "Ik moet te gaan.", "right": "Ik moet gaan.", "why": "No te after modal verbs."},
+        {"wrong": "Ik leer Nederlands voor werken in Nederland.", "right": "Ik leer Nederlands om in Nederland te werken.", "why": "Purpose = om … te."}
+      ],
+      "exercises": [
+        {"id": "ti-1", "t": "choice", "q": "Ik ben vergeten brood ___.", "opts": ["te kopen", "kopen", "gekocht"], "a": "te kopen", "why": "vergeten + te."},
+        {"id": "ti-2", "t": "choice", "q": "We gaan vanavond ___.", "opts": ["dansen", "te dansen"], "a": "dansen", "why": "No te after gaan."},
+        {"id": "ti-3", "t": "order", "en": "I am learning Dutch to work in the Netherlands.", "a": ["Ik leer Nederlands om in Nederland te werken."], "why": "om … te + infinitive at the end."},
+        {"id": "ti-4", "t": "type", "q": "Vergeet niet je moeder ___ ___. (opbellen)", "a": ["op te bellen"], "why": "Separable verb: te in the middle."},
+        {"id": "ti-5", "t": "choice", "q": "Het is moeilijk ___ vroeg op te staan.", "opts": ["om", "te", "voor"], "a": "om", "why": "After an adjective: om … te."}
+      ],
+      "write": ["Why are you learning Dutch? Answer with om … te."]
+    },
+    {
+      "id": "conditional",
+      "title": "would: zou and zouden",
+      "nl": "De voorwaardelijke wijs",
+      "level": "B1",
+      "summary": "Ik zou graag … Als ik tijd had, zou ik komen.",
+      "body": [
+        {"p": "**zou / zouden** + infinitive = would. It is the past of zullen. Ik **zou**, jij **zou**, hij **zou**, wij **zouden**."},
+        {"table": {"head": ["use", "example"], "rows": [
+          ["polite request", "**Zou** u het raam dicht **kunnen** doen?"],
+          ["wish", "Ik **zou** graag in Amsterdam **wonen**."],
+          ["advice", "Ik **zou** naar de dokter **gaan**."],
+          ["unreal situation (now)", "Als ik rijk **was**, **zou** ik een huis **kopen**."],
+          ["unreal situation (past)", "Als ik het **had geweten**, **was** ik **gekomen**. / … **zou** ik **gekomen zijn**."]
+        ]}},
+        {"p": "Notice: after **als** (if) in an unreal situation, Dutch uses the **simple past**, not zou: Als ik tijd **had** (not: als ik tijd zou hebben)."}
+      ],
+      "mistakes": [
+        {"wrong": "Als ik zou rijk zijn, …", "right": "Als ik rijk was, …", "why": "After als: simple past."},
+        {"wrong": "Ik zou graag een koffie.", "right": "Ik wil graag een koffie. / Ik zou graag een koffie willen.", "why": "zou needs an infinitive."}
+      ],
+      "exercises": [
+        {"id": "cd-1", "t": "choice", "q": "___ u mij kunnen helpen?", "opts": ["Zou", "Zal", "Zouden"], "a": "Zou", "why": "u + zou: a polite request."},
+        {"id": "cd-2", "t": "choice", "q": "Als ik meer geld ___, zou ik op reis gaan.", "opts": ["had", "zou hebben", "heb"], "a": "had", "why": "Unreal ‘if’: simple past after als."},
+        {"id": "cd-3", "t": "order", "en": "I would like to live in Utrecht.", "a": ["Ik zou graag in Utrecht wonen.", "Ik zou graag in Utrecht willen wonen."], "why": "zou in position 2, wonen at the end."}
+      ],
+      "write": ["What would you do if you had a free day? (Als ik … had, zou ik …)"]
+    },
+    {
+      "id": "passive",
+      "title": "The passive",
+      "nl": "De lijdende vorm",
+      "level": "B1",
+      "summary": "Het huis wordt verkocht. Het huis is verkocht.",
+      "body": [
+        {"p": "The passive focuses on what happens, not who does it. Form: **worden** + participle."},
+        {"table": {"head": ["tense", "example"], "rows": [
+          ["present", "De brief **wordt** vandaag **verstuurd**."],
+          ["simple past", "De brief **werd** gisteren **verstuurd**."],
+          ["perfect", "De brief **is verstuurd**. (not: is verstuurd geworden)"],
+          ["with a modal", "De brief **moet** vandaag **verstuurd worden**."]
+        ]}},
+        {"p": "Who does it? Add **door**: Het huis werd gebouwd **door** mijn opa."},
+        {"p": "Without a subject, start with **er**: **Er wordt** gebeld. (Someone is ringing.) **Er wordt** hier veel gefietst."}
+      ],
+      "mistakes": [
+        {"wrong": "Het huis is verkocht geworden.", "right": "Het huis is verkocht.", "why": "In the perfect passive, leave out geworden."},
+        {"wrong": "Het huis wordt verkocht van een makelaar.", "right": "Het huis wordt verkocht door een makelaar.", "why": "‘by’ = door."}
+      ],
+      "exercises": [
+        {"id": "pa-1", "t": "choice", "q": "De post ___ elke dag bezorgd.", "opts": ["wordt", "is", "werd"], "a": "wordt", "why": "Present passive: wordt + participle."},
+        {"id": "pa-2", "t": "rewrite", "q": "De dokter onderzoekt de patiënt.", "task": "Make it passive. Start with: De patiënt …", "a": ["De patiënt wordt door de dokter onderzocht.", "De patiënt wordt onderzocht door de dokter."], "why": "wordt + onderzocht, door de dokter."},
+        {"id": "pa-3", "t": "choice", "q": "Er ___ gebeld. Doe jij open?", "opts": ["wordt", "is", "heeft"], "a": "wordt", "why": "Impersonal passive: er wordt …"}
+      ],
+      "write": []
+    },
+    {
+      "id": "verb-clusters",
+      "title": "Two verbs at the end",
+      "nl": "Werkwoordclusters",
+      "level": "B1",
+      "summary": "Ik heb moeten werken — not gemoeten.",
+      "body": [
+        {"p": "When a modal (or laten, gaan, blijven, zitten …) is in the perfect together with another verb, it does **not** become a participle. You get **two infinitives**:"},
+        {"ex": [
+          ["Ik heb gisteren moeten werken.", "I had to work yesterday."],
+          ["Hij heeft niet kunnen komen.", "He couldn't come."],
+          ["Ik heb mijn fiets laten repareren.", "I had my bike repaired."],
+          ["We zijn gaan zwemmen.", "We went swimming."]
+        ]},
+        {"h": "Order in a subordinate clause"},
+        {"p": "All verbs at the end. Usual order: finite verb first, then the infinitives: … omdat ik **heb moeten werken**. With a participle both orders are fine: … dat hij **heeft gewerkt** / **gewerkt heeft**."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik heb gemoeten werken.", "right": "Ik heb moeten werken.", "why": "Double infinitive."},
+        {"wrong": "Ik ben gegaan zwemmen.", "right": "Ik ben gaan zwemmen.", "why": "Double infinitive with gaan."}
+      ],
+      "exercises": [
+        {"id": "vc-1", "t": "choice", "q": "Ik heb niet ___ komen.", "opts": ["kunnen", "gekund", "kan"], "a": "kunnen", "why": "Double infinitive: kunnen komen."},
+        {"id": "vc-2", "t": "rewrite", "q": "Ik moet gisteren werken.", "task": "Put it in the perfect tense: Ik heb …", "a": ["Ik heb gisteren moeten werken."], "why": "heb + moeten werken at the end."},
+        {"id": "vc-3", "t": "order", "en": "We went swimming yesterday.", "a": ["We zijn gisteren gaan zwemmen.", "Gisteren zijn we gaan zwemmen."], "why": "zijn + gaan zwemmen."}
+      ],
+      "write": []
+    },
+    {
+      "id": "laten",
+      "title": "laten",
+      "nl": "Laten",
+      "level": "B1",
+      "summary": "let, leave, have something done, and Laten we …",
+      "body": [
+        {"table": {"head": ["meaning", "example"], "rows": [
+          ["have something done", "Ik **laat** mijn haar **knippen**."],
+          ["let, allow", "**Laat** mij even **praten**."],
+          ["leave", "Ik heb mijn tas thuis **gelaten**."],
+          ["let's", "**Laten we** **gaan**!"],
+          ["never mind", "**Laat maar**."]
+        ]}},
+        {"p": "With an infinitive, the perfect is a double infinitive: Ik **heb** mijn auto **laten repareren**."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik heb mijn haar gelaten knippen.", "right": "Ik heb mijn haar laten knippen.", "why": "Double infinitive."}
+      ],
+      "exercises": [
+        {"id": "la-1", "t": "translate", "q": "Let's go!", "a": ["Laten we gaan!", "Laten wij gaan!", "Kom, laten we gaan!"], "why": "Laten we + infinitive."},
+        {"id": "la-2", "t": "choice", "q": "Ik heb mijn fiets ___ maken.", "opts": ["laten", "gelaten"], "a": "laten", "why": "Double infinitive."},
+        {"id": "la-3", "t": "order", "en": "I am having my hair cut.", "a": ["Ik laat mijn haar knippen."], "why": "laat in position 2, knippen at the end."}
+      ],
+      "write": []
+    }
+  ]
+}

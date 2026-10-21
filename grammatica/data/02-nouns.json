@@ -1,0 +1,171 @@
+{
+  "id": "nouns",
+  "title": "Nouns and articles",
+  "nl": "Zelfstandige naamwoorden en lidwoorden",
+  "intro": "de or het, een or nothing, plurals, little words with -je, and long compound words.",
+  "topics": [
+    {
+      "id": "articles",
+      "title": "de and het",
+      "nl": "De lidwoorden de en het",
+      "level": "A1",
+      "summary": "Two words for ‘the’. Every plural takes de.",
+      "body": [
+        {"p": "Dutch has two words for ‘the’: **de** and **het**. About two out of three nouns are de-words. In the **plural every noun takes de**."},
+        {"table": {"head": ["", "singular", "plural"], "rows": [
+          ["de-word", "**de** man", "**de** mannen"],
+          ["het-word", "**het** huis", "**de** huizen"]
+        ]}},
+        {"h": "Always het"},
+        {"list": [
+          "Small words ending in -je (diminutives): **het meisje**, **het huisje**, **het kopje**",
+          "Languages: **het Nederlands**, **het Engels**",
+          "A verb used as a noun: **het eten**, **het leven**",
+          "Most words ending in -um, -ment, -isme: **het museum**, **het document**",
+          "Most words starting with ge-, be-, ver-, ont- (no extra ending): **het gesprek**, **het begin**, **het verhaal**, **het ontbijt**"
+        ]},
+        {"h": "Always de"},
+        {"list": [
+          "People and jobs: **de man**, **de vrouw**, **de dokter** (but **het kind**, **het meisje**)",
+          "Words ending in -heid, -ing, -tie, -teit, -ij: **de gezondheid**, **de woning**, **de informatie**, **de universiteit**, **de bakkerij**",
+          "All plurals: **de kinderen**, **de huizen**"
+        ]},
+        {"tip": "For all other nouns, learn de or het together with the word: not ‘huis’ but ‘het huis’. If you have to guess, guess **de**."},
+        {"p": "Why it matters: de or het decides **deze/dit**, **die/dat**, the adjective ending (een groot huis, een grote auto) and **die/dat** in relative clauses."}
+      ],
+      "mistakes": [
+        {"wrong": "het man", "right": "de man", "why": "Words for people are de-words (except het kind, het meisje)."},
+        {"wrong": "de meisje", "right": "het meisje", "why": "Words ending in -je are always het."},
+        {"wrong": "het huizen", "right": "de huizen", "why": "Every plural takes de."}
+      ],
+      "exercises": [
+        {"id": "ar-1", "t": "choice", "q": "___ meisje", "opts": ["de", "het"], "a": "het", "why": "-je words are always het."},
+        {"id": "ar-2", "t": "choice", "q": "___ informatie", "opts": ["de", "het"], "a": "de", "why": "Words ending in -tie are de-words."},
+        {"id": "ar-3", "t": "choice", "q": "___ huizen", "opts": ["de", "het"], "a": "de", "why": "All plurals take de."},
+        {"id": "ar-4", "t": "choice", "q": "___ Nederlands is niet moeilijk.", "opts": ["De", "Het"], "a": "Het", "why": "Languages are het-words."},
+        {"id": "ar-5", "t": "choice", "q": "___ woning is groot.", "opts": ["De", "Het"], "a": "De", "why": "Words ending in -ing are de-words."},
+        {"id": "ar-6", "t": "choice", "q": "___ gesprek duurt lang.", "opts": ["De", "Het"], "a": "Het", "why": "ge- words without an extra ending are usually het."}
+      ],
+      "write": ["Write two sentences about things in your house. Use de and het."]
+    },
+    {
+      "id": "article-een",
+      "title": "een, één and no article",
+      "nl": "Een, één en geen lidwoord",
+      "level": "A1",
+      "summary": "een = a/an. No article for plurals, uncountables and jobs.",
+      "body": [
+        {"p": "**een** means ‘a’ or ‘an’. It is the same for de-words and het-words: **een man**, **een huis**. It is pronounced like a short ‘un’."},
+        {"p": "**één** with accents means the number **one**: Ik heb **één** kind."},
+        {"h": "No article"},
+        {"list": [
+          "Plurals in general: Ik heb **boeken**. (I have books.)",
+          "Things you cannot count: Ik drink **koffie**. Ik heb **geld**.",
+          "Jobs and nationality after zijn/worden: Ik ben **leraar**. Zij is **Marokkaans**. Hij wordt **kok**."
+        ]},
+        {"ex": [
+          ["Ik ben verpleegkundige.", "I am a nurse."],
+          ["Wil je thee?", "Do you want tea?"],
+          ["Er staan stoelen in de kamer.", "There are chairs in the room."]
+        ]}
+      ],
+      "mistakes": [
+        {"wrong": "Ik ben een leraar.", "right": "Ik ben leraar.", "why": "No een before a job after zijn."}
+      ],
+      "exercises": [
+        {"id": "ae-1", "t": "choice", "q": "Ik ben ___ kok.", "en": "I am a cook.", "opts": ["— (nothing)", "een", "de"], "a": "— (nothing)", "why": "No article before a job after zijn."},
+        {"id": "ae-2", "t": "choice", "q": "Wij hebben ___ kind.", "en": "We have one child.", "opts": ["één", "een", "de"], "a": "één", "why": "The number one is written één."},
+        {"id": "ae-3", "t": "choice", "q": "Ik koop ___ fiets.", "en": "I am buying a bike.", "opts": ["een", "één", "— (nothing)"], "a": "een", "why": "een = a. It is not about the number here."}
+      ],
+      "write": []
+    },
+    {
+      "id": "plural",
+      "title": "Plurals",
+      "nl": "Het meervoud",
+      "level": "A1",
+      "summary": "Mostly -en, sometimes -s or -'s, a few irregular.",
+      "body": [
+        {"h": "-en: most words"},
+        {"p": "Most nouns get **-en**, with the spelling rules: **de boek → boeken**, **de kat → katten**, **de straat → straten**, **het huis → huizen**."},
+        {"h": "-s"},
+        {"list": [
+          "Words ending in unstressed **-el, -em, -en, -er, -je**: tafel**s**, bezem**s**, jongen**s**, kamer**s**, meisje**s**",
+          "Many loanwords: de film**s**, de computer**s**"
+        ]},
+        {"h": "-'s"},
+        {"p": "After a long **a, i, o, u, y** at the end of a word: **auto's**, **foto's**, **menu's**, **taxi's**, **baby's**. The apostrophe keeps the vowel long."},
+        {"h": "Irregular"},
+        {"table": {"head": ["singular", "plural"], "rows": [
+          ["het kind", "de kinderen"],
+          ["het ei", "de eieren"],
+          ["de stad", "de steden"],
+          ["het schip", "de schepen"],
+          ["de mogelijkheid", "de mogelijkheden"]
+        ]}}
+      ],
+      "mistakes": [
+        {"wrong": "twee autos", "right": "twee auto's", "why": "Without the apostrophe you would read a short o."},
+        {"wrong": "de kinds", "right": "de kinderen", "why": "Irregular plural."}
+      ],
+      "exercises": [
+        {"id": "pl-1", "t": "type", "q": "de tafel → twee ___", "a": ["tafels"], "why": "Unstressed -el gets -s."},
+        {"id": "pl-2", "t": "choice", "q": "Ik heb drie ___. (de foto)", "opts": ["foto's", "fotos", "fotoen"], "a": "foto's", "why": "After a long o at the end: -'s."},
+        {"id": "pl-3", "t": "type", "q": "het kind → de ___", "a": ["kinderen"], "why": "Irregular: kinderen."},
+        {"id": "pl-4", "t": "choice", "q": "de stad → de ___", "opts": ["steden", "stadden", "stads"], "a": "steden", "why": "Irregular: the a changes to e."}
+      ],
+      "write": []
+    },
+    {
+      "id": "diminutives",
+      "title": "Diminutives: -je",
+      "nl": "Verkleinwoorden",
+      "level": "A2",
+      "summary": "huisje, kopje, balletje: small, friendly, and always het.",
+      "body": [
+        {"p": "Dutch uses small forms a lot, not only for small things but also to sound friendly or casual: **een kopje koffie**, **een biertje**, **even een rondje lopen**. A diminutive is **always a het-word** and the plural takes **-s**: het boekje, de boekjes."},
+        {"table": {"head": ["ending", "when", "examples"], "rows": [
+          ["-je", "most words", "boek → boek**je**, huis → huis**je**"],
+          ["-tje", "after a vowel; after l, n, r, w with a long vowel; after unstressed -el, -en, -er", "auto → auto**tje**, stoel → stoel**tje**, tafel → tafel**tje**"],
+          ["-pje", "after m with a long vowel, or -lm, -rm", "boom → boom**pje**, film → film**pje**"],
+          ["-etje", "after l, m, n, r, ng with a short stressed vowel", "bal → bal**letje**, man → man**netje**, ring → ring**etje**"],
+          ["-kje", "after unstressed -ing", "woning → wonin**kje**"]
+        ]}}
+      ],
+      "mistakes": [
+        {"wrong": "de huisje", "right": "het huisje", "why": "Diminutives are always het."}
+      ],
+      "exercises": [
+        {"id": "di-1", "t": "choice", "q": "de boom → het ___", "opts": ["boompje", "boomje", "boometje"], "a": "boompje", "why": "m after a long vowel: -pje."},
+        {"id": "di-2", "t": "type", "q": "de bal → het ___", "a": ["balletje"], "why": "Short stressed vowel + l: -etje, with double l."},
+        {"id": "di-3", "t": "type", "q": "de tafel → het ___", "a": ["tafeltje"], "why": "Unstressed -el: -tje."},
+        {"id": "di-4", "t": "choice", "q": "___ kopje koffie is lekker.", "opts": ["Het", "De"], "a": "Het", "why": "Diminutives are het-words."}
+      ],
+      "write": []
+    },
+    {
+      "id": "compounds",
+      "title": "Compound nouns",
+      "nl": "Samenstellingen",
+      "level": "A2",
+      "summary": "Words are glued together; the last part decides de or het.",
+      "body": [
+        {"p": "Dutch writes compound nouns as **one word**: **het fietspad** (bike path), **de huisdeur** (front door), **het ziekenhuis** (hospital)."},
+        {"p": "The **last part** decides the article: de fiets + **het** pad = **het** fietspad; het huis + **de** deur = **de** huisdeur."},
+        {"h": "Linking letters"},
+        {"p": "Sometimes **-s-** or **-en-** goes in between: **het stadhuis**, **het verkeersbord**, **de kippensoep**, **de pannenkoek**. Learn these with the word."},
+        {"p": "When two vowels meet and could be read wrongly, use a hyphen: **zee-egel**, **auto-ongeluk**."}
+      ],
+      "mistakes": [
+        {"wrong": "de fietspad", "right": "het fietspad", "why": "pad is a het-word, and the last part decides."},
+        {"wrong": "fiets pad", "right": "fietspad", "why": "Compounds are written as one word."}
+      ],
+      "exercises": [
+        {"id": "co-1", "t": "choice", "q": "___ fietspad (de fiets + het pad)", "opts": ["het", "de"], "a": "het", "why": "The last part (het pad) decides."},
+        {"id": "co-2", "t": "choice", "q": "___ huisdeur (het huis + de deur)", "opts": ["de", "het"], "a": "de", "why": "The last part (de deur) decides."},
+        {"id": "co-3", "t": "choice", "q": "auto + ongeluk = ___", "opts": ["auto-ongeluk", "autoongeluk", "auto ongeluk"], "a": "auto-ongeluk", "why": "A hyphen separates o + o so you read it correctly."}
+      ],
+      "write": []
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "spelling",
+  "title": "Spelling",
+  "nl": "Spelling",
+  "intro": "Two rules explain most Dutch spelling changes: open and closed syllables, and f/v and s/z. You need them for plurals, verb forms and adjectives.",
+  "topics": [
+    {
+      "id": "spelling-vowels",
+      "title": "Long and short vowels",
+      "nl": "Open en gesloten lettergrepen",
+      "level": "A1",
+      "summary": "Why it is man → mannen but maan → manen.",
+      "body": [
+        {"p": "Dutch spelling looks odd at first: why **man → mannen** but **maan → manen**? It all follows from one rule about syllables. Learn it once and you can spell plurals, verb forms and adjectives."},
+        {"h": "Short and long vowels"},
+        {"table": {"head": ["Short", "Long"], "rows": [
+          ["a — man, kat", "aa — maan, straat"],
+          ["e — bed, pen", "ee — been, twee"],
+          ["o — bot, pot", "oo — boom, groot"],
+          ["u — bus, kus", "uu — vuur, muur"]
+        ]}},
+        {"h": "Open and closed syllables"},
+        {"p": "A syllable that ends in a vowel is **open** (ma-, bo-). A syllable that ends in a consonant is **closed** (man, boom)."},
+        {"list": [
+          "A **long** vowel in a **closed** syllable is written double: **maan**, **boom**, **straat**.",
+          "A **long** vowel in an **open** syllable is written single, because it is long already: **ma-nen**, **bo-men**, **stra-ten**.",
+          "A **short** vowel needs a closed syllable. So when an ending with a vowel follows, the consonant is doubled: **man → man-nen**, **bus → bus-sen**, **kat → kat-ten**."
+        ]},
+        {"ex": [
+          ["de maan → de manen", "moon → moons"],
+          ["de man → de mannen", "man → men"],
+          ["groot → de grote stad", "big → the big city"],
+          ["wit → het witte huis", "white → the white house"],
+          ["maken → ik maak", "to make → I make"],
+          ["zitten → ik zit", "to sit → I sit"]
+        ]},
+        {"tip": "The rule only works for **a, e, o, u**. Vowel pairs like **oe, ie, eu, ui, ei, ij, ou, au** never change: boek → boeken, deur → deuren."}
+      ],
+      "mistakes": [
+        {"wrong": "twee katen", "right": "twee katten", "why": "kat has a short a, so the t is doubled to keep the syllable closed."},
+        {"wrong": "ik maaken / ik mak", "right": "ik maak", "why": "maak is one closed syllable with a long a, so you write aa."}
+      ],
+      "exercises": [
+        {"id": "sv-1", "t": "choice", "q": "één boom, twee ___", "opts": ["bomen", "boomen", "bommen"], "a": "bomen", "why": "bo-men: the first syllable is open, so one o is already long."},
+        {"id": "sv-2", "t": "type", "q": "één bus, twee ___", "a": ["bussen"], "why": "bus has a short u, so the s is doubled: bus-sen."},
+        {"id": "sv-3", "t": "type", "q": "lopen → ik ___", "a": ["loop"], "why": "loop is a closed syllable with a long o, so you write oo."},
+        {"id": "sv-4", "t": "choice", "q": "Ik woon in een ___ huis. (wit)", "en": "I live in a white house.", "opts": ["witte", "wite", "wiete"], "a": "witte", "why": "wit has a short i; adding -e needs a double t: wit-te."},
+        {"id": "sv-5", "t": "type", "q": "de straat, de ___ (plural)", "a": ["straten"], "why": "stra-ten: open syllable, so a single a."}
+      ],
+      "write": []
+    },
+    {
+      "id": "spelling-fvsz",
+      "title": "f/v and s/z",
+      "nl": "f/v en s/z",
+      "level": "A1",
+      "summary": "A Dutch word never ends in v or z: leven → ik leef, huis → huizen.",
+      "body": [
+        {"p": "Dutch words never end in **v** or **z**. At the end of a word you write **f** or **s**. When an ending with a vowel follows, the sound often becomes **v** or **z** again."},
+        {"ex": [
+          ["leven → ik leef", "to live → I live"],
+          ["lezen → hij leest", "to read → he reads"],
+          ["het huis → de huizen", "house → houses"],
+          ["de brief → de brieven", "letter → letters"],
+          ["verhuizen → wij verhuisden, ik verhuis", "to move house"]
+        ]},
+        {"h": "Verbs: always reliable"},
+        {"p": "For verbs the rule never fails: the stem ends in **f** or **s**, never in v or z. **geven → ik geef**, **reizen → ik reis**, **geloven → ik geloof**."},
+        {"h": "Nouns: learn the plural"},
+        {"p": "With nouns it usually works after a long vowel (huis → huizen, brief → brieven), but not always: **de kous → de kousen**, **de fotograaf → de fotografen**. After a short vowel there is no change: **de les → de lessen**."}
+      ],
+      "mistakes": [
+        {"wrong": "ik leev, ik geev", "right": "ik leef, ik geef", "why": "A word cannot end in v."},
+        {"wrong": "twee huisen", "right": "twee huizen", "why": "Between two vowels the s-sound of huis becomes z."}
+      ],
+      "exercises": [
+        {"id": "fv-1", "t": "type", "q": "geven → ik ___", "a": ["geef"], "why": "A verb stem never ends in v: geef."},
+        {"id": "fv-2", "t": "choice", "q": "Hij ___ de krant. (lezen)", "en": "He reads the newspaper.", "opts": ["leest", "leezt", "lezt"], "a": "leest", "why": "Stem lees (not leez) + t."},
+        {"id": "fv-3", "t": "choice", "q": "één brief, twee ___", "opts": ["brieven", "briefen", "brievs"], "a": "brieven", "why": "Between vowels f becomes v: brieven."},
+        {"id": "fv-4", "t": "type", "q": "reizen → ik ___", "a": ["reis"], "why": "A word cannot end in z: reis."}
+      ],
+      "write": []
+    }
+  ]
+}

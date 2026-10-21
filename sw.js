@@ -1,6 +1,6 @@
 /* Service worker: makes the app work offline.
    After changing any file, raise VERSION so phones fetch the new files. */
-const VERSION = 'v4';
+const VERSION = 'v5';
 const CACHE = 'mvv-oefenapp-' + VERSION;
 const QUESTIONS = 'assets/data/questions.json';
 const WORKBOOK = 'assets/data/workbook.json';
@@ -52,6 +52,8 @@ self.addEventListener('fetch', (event) => {
     return;
   }
   if (url.origin !== self.location.origin) return;
+  // The grammar app in grammatica/ has its own service worker and cache.
+  if (url.pathname.includes('/grammatica/')) return;
 
   // Content: network first (so edits arrive), cache as fallback.
   if (url.pathname.endsWith('/content.json') || url.pathname.endsWith('/' + QUESTIONS) || url.pathname.endsWith('/' + WORKBOOK)) {
