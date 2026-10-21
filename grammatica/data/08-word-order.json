@@ -1,0 +1,293 @@
+{
+  "id": "word-order",
+  "title": "Word order",
+  "nl": "Zinsbouw",
+  "intro": "The heart of Dutch grammar: the verb in second place, the other verbs at the end, and subordinate clauses with all verbs at the end.",
+  "topics": [
+    {
+      "id": "v2",
+      "title": "The verb in second place",
+      "nl": "De persoonsvorm op plaats 2",
+      "level": "A1",
+      "summary": "Ik werk morgen. Morgen werk ik. The verb never moves from place 2.",
+      "body": [
+        {"p": "In a normal Dutch sentence the **conjugated verb** (the finite verb) is always in **position 2**. Position 1 can be the subject, but also a time, a place or an object. If something else is in position 1, the **subject comes right after the verb**. This is called inversion."},
+        {"table": {"head": ["1", "2: verb", "subject", "rest"], "rows": [
+          ["Ik", "**werk**", "", "morgen in Utrecht."],
+          ["Morgen", "**werk**", "ik", "in Utrecht."],
+          ["In Utrecht", "**werk**", "ik", "morgen."],
+          ["Die film", "**heb**", "ik", "al gezien."]
+        ]}},
+        {"tip": "Position 1 can be long, but it is one block: **Volgende week dinsdag om drie uur** heb ik een afspraak."},
+        {"p": "Reminder: when **jij/je** comes after the verb, the verb loses -t: Morgen **werk je** thuis."}
+      ],
+      "mistakes": [
+        {"wrong": "Morgen ik werk.", "right": "Morgen werk ik.", "why": "The verb stays in position 2; the subject moves after it."},
+        {"wrong": "Gisteren ik heb gewerkt.", "right": "Gisteren heb ik gewerkt.", "why": "heb is the verb in position 2."}
+      ],
+      "exercises": [
+        {"id": "v2-1", "t": "order", "en": "Tomorrow I am going to Amsterdam.", "a": ["Morgen ga ik naar Amsterdam."], "why": "Morgen in position 1, ga in position 2, then ik."},
+        {"id": "v2-2", "t": "choice", "q": "Which sentence is correct?", "opts": ["Vandaag ik ben moe.", "Vandaag ben ik moe.", "Vandaag ben moe ik."], "a": "Vandaag ben ik moe.", "why": "Verb in position 2, subject right after it."},
+        {"id": "v2-3", "t": "rewrite", "q": "Ik drink 's ochtends koffie.", "task": "Start with: 's Ochtends …", "a": ["'s Ochtends drink ik koffie."], "why": "drink stays in position 2, ik follows."},
+        {"id": "v2-4", "t": "order", "en": "In the summer we often cycle.", "a": ["In de zomer fietsen we vaak.", "We fietsen vaak in de zomer.", "In de zomer fietsen wij vaak.", "Wij fietsen vaak in de zomer."], "why": "In de zomer = one block in position 1."},
+        {"id": "v2-5", "t": "translate", "q": "On Saturday I work at home.", "a": ["Op zaterdag werk ik thuis.", "Zaterdag werk ik thuis.", "Ik werk op zaterdag thuis.", "Ik werk zaterdag thuis."], "why": "Time in position 1 → werk ik."}
+      ],
+      "write": ["Write three sentences that start with a time word (Vandaag, Morgen, 's Avonds …)."]
+    },
+    {
+      "id": "questions",
+      "title": "Questions",
+      "nl": "Vragen",
+      "level": "A1",
+      "summary": "Yes/no: verb first. With a question word: question word, verb, subject.",
+      "body": [
+        {"table": {"head": ["type", "order", "example"], "rows": [
+          ["yes / no", "**verb** – subject – rest", "**Woon** je in Utrecht? **Heeft** hij kinderen?"],
+          ["question word", "question word – **verb** – subject – rest", "Waar **woon** je? Wanneer **komt** de bus?"]
+        ]}},
+        {"p": "Remember the jij-rule: **Woon jij** …? **Werk je** …? But: **Woont u** …?"},
+        {"p": "A second verb still goes to the end: **Wil** je koffie **drinken**? Wat **heb** je gisteren **gedaan**?"}
+      ],
+      "mistakes": [
+        {"wrong": "Jij woont in Utrecht?", "right": "Woon jij in Utrecht?", "why": "Only with a questioning tone in speech; normally the verb comes first."},
+        {"wrong": "Waar jij werkt?", "right": "Waar werk jij?", "why": "Question word, then verb."}
+      ],
+      "exercises": [
+        {"id": "qu-1", "t": "order", "en": "Do you have children?", "a": ["Heb je kinderen?", "Heb jij kinderen?"], "why": "Yes/no question: verb first; heb jij (no t)."},
+        {"id": "qu-2", "t": "order", "en": "Where do you work?", "a": ["Waar werk je?", "Waar werk jij?"], "why": "Question word, verb, subject."},
+        {"id": "qu-3", "t": "type", "q": "___ u in Den Haag? (wonen)", "a": ["woont"], "why": "u keeps the t."},
+        {"id": "qu-4", "t": "translate", "q": "What did you do yesterday?", "a": ["Wat heb je gisteren gedaan?", "Wat heb jij gisteren gedaan?", "Wat deed je gisteren?", "Wat deed jij gisteren?"], "why": "Wat + heb + je … gedaan at the end."}
+      ],
+      "write": ["Write three questions you could ask at the doctor's or at the town hall (use u)."]
+    },
+    {
+      "id": "verb-bracket",
+      "title": "The second verb at the end",
+      "nl": "De tangconstructie",
+      "level": "A1",
+      "summary": "Ik wil morgen naar de markt gaan. Everything else sits between the two verbs.",
+      "body": [
+        {"p": "When there are two verbs, the finite verb stays in position 2 and the **other verb goes to the very end**. Everything else is in between, like a bracket."},
+        {"table": {"head": ["1", "2: verb", "middle", "end"], "rows": [
+          ["Ik", "**wil**", "morgen naar de markt", "**gaan**."],
+          ["Ik", "**heb**", "gisteren een boek", "**gelezen**."],
+          ["Ik", "**bel**", "je morgen", "**op**."],
+          ["Morgen", "**ga**", "ik met de trein", "**reizen**."],
+          ["Het huis", "**wordt**", "volgende week", "**verkocht**."]
+        ]}},
+        {"p": "At the end can be: an infinitive (modal, gaan), a participle (perfect, passive) or the small part of a separable verb."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik heb gelezen een boek.", "right": "Ik heb een boek gelezen.", "why": "The participle closes the sentence."},
+        {"wrong": "Ik kan komen morgen niet.", "right": "Ik kan morgen niet komen.", "why": "komen goes to the end."}
+      ],
+      "exercises": [
+        {"id": "vb-1", "t": "order", "en": "I want to buy a new phone.", "a": ["Ik wil een nieuwe telefoon kopen."], "why": "wil … kopen."},
+        {"id": "vb-2", "t": "order", "en": "We watched a film yesterday.", "a": ["We hebben gisteren een film gekeken.", "Gisteren hebben we een film gekeken.", "Wij hebben gisteren een film gekeken.", "Gisteren hebben wij een film gekeken."], "why": "hebben … gekeken."},
+        {"id": "vb-3", "t": "choice", "q": "Which sentence is correct?", "opts": ["Ik ga morgen boodschappen doen.", "Ik ga doen morgen boodschappen.", "Ik ga morgen doen boodschappen."], "a": "Ik ga morgen boodschappen doen.", "why": "doen at the end."},
+        {"id": "vb-4", "t": "rewrite", "q": "Hij leert Nederlands.", "task": "Add moet: Hij moet …", "a": ["Hij moet Nederlands leren."], "why": "moet in position 2, leren at the end."}
+      ],
+      "write": ["Write two sentences with a modal verb and two in the perfect tense."]
+    },
+    {
+      "id": "middle-field",
+      "title": "Order in the middle: time, manner, place",
+      "nl": "Tijd – manier – plaats",
+      "level": "B1",
+      "summary": "Ik ga morgen met de trein naar Amsterdam. Pronouns come early.",
+      "body": [
+        {"p": "Between the verbs, the usual order is **time – manner – place** (TMP)."},
+        {"table": {"head": ["", "time", "manner", "place", ""], "rows": [
+          ["Ik ga", "**morgen**", "**met de trein**", "**naar Amsterdam**", "."],
+          ["Hij is", "**gisteren**", "**met zijn vrouw**", "**naar huis**", "gegaan."]
+        ]}},
+        {"p": "**Short pronouns come first**, right after the verb (or subject): Ik heb **hem** gisteren gezien. Ik geef **het** morgen aan jou."},
+        {"p": "A **place where you go** (naar Amsterdam) is usually last, just before the final verb."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik ga naar Amsterdam morgen.", "right": "Ik ga morgen naar Amsterdam.", "why": "Time before place."},
+        {"wrong": "Ik heb gisteren hem gezien.", "right": "Ik heb hem gisteren gezien.", "why": "Short pronouns come early."}
+      ],
+      "exercises": [
+        {"id": "mf-1", "t": "order", "en": "I am going to Utrecht by bus tomorrow.", "a": ["Ik ga morgen met de bus naar Utrecht.", "Morgen ga ik met de bus naar Utrecht."], "why": "Time – manner – place."},
+        {"id": "mf-2", "t": "choice", "q": "Which sentence is correct?", "opts": ["Ik heb hem gisteren gebeld.", "Ik heb gisteren hem gebeld.", "Ik heb gisteren gebeld hem."], "a": "Ik heb hem gisteren gebeld.", "why": "Pronoun early, participle at the end."},
+        {"id": "mf-3", "t": "order", "en": "She cycles to work every day.", "a": ["Ze fietst elke dag naar haar werk.", "Zij fietst elke dag naar haar werk.", "Elke dag fietst ze naar haar werk.", "Elke dag fietst zij naar haar werk."], "why": "Time (elke dag) before place (naar haar werk)."}
+      ],
+      "write": ["Write a sentence about how and when you travel somewhere (time, manner, place)."]
+    },
+    {
+      "id": "coordinating",
+      "title": "en, maar, of, want, dus",
+      "nl": "Nevenschikkende voegwoorden",
+      "level": "A2",
+      "summary": "These link two main clauses and don't change the word order.",
+      "body": [
+        {"p": "**en** (and), **maar** (but), **of** (or), **want** (because), **dus** (so) connect two normal sentences. After them, normal word order: subject, then verb."},
+        {"ex": [
+          ["Ik ben moe, maar ik ga nog niet slapen.", "I am tired, but I am not going to sleep yet."],
+          ["Ik blijf thuis, want ik ben ziek.", "I am staying home, because I am ill."],
+          ["Het regent, dus ik neem de bus.", "It is raining, so I take the bus."],
+          ["Wil je thee of wil je koffie?", "Do you want tea or coffee?"]
+        ]},
+        {"p": "**dus** can also act like an adverb: then the verb comes right after it: Het regent, **dus neem** ik de bus. Both are correct."},
+        {"tip": "**want** and **omdat** both mean ‘because’. After want: normal order. After omdat: verb at the end (see Subordinate clauses)."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik blijf thuis, want ik ziek ben.", "right": "Ik blijf thuis, want ik ben ziek.", "why": "After want: normal order."}
+      ],
+      "exercises": [
+        {"id": "cj-1", "t": "choice", "q": "Ik kom niet, want ___.", "opts": ["ik ben ziek", "ik ziek ben", "ben ik ziek"], "a": "ik ben ziek", "why": "want + normal order."},
+        {"id": "cj-2", "t": "choice", "q": "Ik wil graag komen, ___ ik heb geen tijd.", "opts": ["maar", "want", "dus"], "a": "maar", "why": "Contrast → maar."},
+        {"id": "cj-3", "t": "order", "en": "I am hungry, so I am cooking.", "a": ["Ik heb honger, dus ik kook.", "Ik heb honger, dus kook ik."], "why": "dus: both orders are correct."}
+      ],
+      "write": ["Write two sentences with want and two with maar."]
+    },
+    {
+      "id": "subordinate",
+      "title": "Subordinate clauses: verb at the end",
+      "nl": "Bijzinnen",
+      "level": "A2",
+      "summary": "Ik blijf thuis omdat ik ziek ben. All verbs at the end.",
+      "body": [
+        {"p": "After a subordinating conjunction the clause is a **subordinate clause**: the **subject comes right after the conjunction** and **all verbs go to the end**."},
+        {"table": {"head": ["conjunction", "meaning", "example"], "rows": [
+          ["dat", "that", "Ik denk **dat** hij morgen **komt**."],
+          ["omdat", "because", "Ik blijf thuis **omdat** ik ziek **ben**."],
+          ["als", "if / when", "**Als** het regent, neem ik de bus."],
+          ["toen", "when (once, in the past)", "**Toen** ik klein **was**, …"],
+          ["terwijl", "while", "… **terwijl** ik **kook**."],
+          ["voordat / nadat", "before / after", "… **voordat** ik naar mijn werk **ga**."],
+          ["hoewel", "although", "… **hoewel** het **regent**."],
+          ["zodat", "so that", "… **zodat** iedereen het **kan zien**."],
+          ["totdat / tot", "until", "… **totdat** de bus **komt**."],
+          ["sinds", "since", "… **sinds** ik hier **woon**."],
+          ["of", "whether / if", "Ik weet niet **of** hij **komt**."]
+        ]}},
+        {"p": "With more verbs, they all line up at the end: … omdat ik morgen **moet werken**. … omdat ik gisteren **heb gewerkt** (or **gewerkt heb**)."},
+        {"p": "A separable verb comes together again: … omdat ik je morgen **opbel**."}
+      ],
+      "mistakes": [
+        {"wrong": "omdat ik ben ziek", "right": "omdat ik ziek ben", "why": "Verb at the end after omdat."},
+        {"wrong": "Ik denk dat hij komt morgen.", "right": "Ik denk dat hij morgen komt.", "why": "komt at the very end."}
+      ],
+      "exercises": [
+        {"id": "sb-1", "t": "order", "en": "I am staying home because I am ill.", "a": ["Ik blijf thuis omdat ik ziek ben."], "why": "omdat … ben at the end."},
+        {"id": "sb-2", "t": "choice", "q": "Ik denk dat ___.", "opts": ["hij morgen komt", "hij komt morgen", "komt hij morgen"], "a": "hij morgen komt", "why": "dat → verb at the end."},
+        {"id": "sb-3", "t": "rewrite", "q": "Ik ben moe. (Join: Ik ga slapen omdat …)", "task": "Write the full sentence.", "a": ["Ik ga slapen omdat ik moe ben."], "why": "omdat ik moe ben."},
+        {"id": "sb-4", "t": "order", "en": "I learn Dutch because I want to live in the Netherlands.", "a": ["Ik leer Nederlands omdat ik in Nederland wil wonen.", "Ik leer Nederlands omdat ik in Nederland wonen wil."], "why": "Both verbs at the end."},
+        {"id": "sb-5", "t": "choice", "q": "Hij zegt dat hij het ___.", "opts": ["niet heeft gezien", "heeft niet gezien", "gezien niet heeft"], "a": "niet heeft gezien", "why": "All verbs at the end, niet before them."},
+        {"id": "sb-6", "t": "translate", "q": "I don't know if he is coming.", "a": ["Ik weet niet of hij komt.", "Ik weet niet of hij gaat komen."], "why": "of = whether; verb at the end."}
+      ],
+      "write": ["Explain why you are learning Dutch, using omdat."]
+    },
+    {
+      "id": "sub-first",
+      "title": "Subordinate clause first",
+      "nl": "Bijzin voorop",
+      "level": "B1",
+      "summary": "Als het regent, neem ik de bus. verb, comma, verb.",
+      "body": [
+        {"p": "A subordinate clause can come first. It then fills **position 1**, so the main clause starts with its **verb**, followed by the subject."},
+        {"table": {"head": ["position 1 (whole clause)", "2: verb", "subject", "rest"], "rows": [
+          ["Als het regent,", "**neem**", "ik", "de bus."],
+          ["Omdat ik ziek ben,", "**blijf**", "ik", "thuis."],
+          ["Toen ik in Nederland kwam,", "**sprak**", "ik", "geen Nederlands."]
+        ]}},
+        {"tip": "Easy check: **verb – comma – verb**. … regent**,** neem ik …"}
+      ],
+      "mistakes": [
+        {"wrong": "Als het regent, ik neem de bus.", "right": "Als het regent, neem ik de bus.", "why": "The clause is position 1, so the verb comes next."}
+      ],
+      "exercises": [
+        {"id": "sf-1", "t": "order", "en": "If the weather is nice, we go to the beach.", "a": ["Als het mooi weer is, gaan we naar het strand.", "Als het mooi weer is, gaan wij naar het strand."], "why": "Verb, comma, verb."},
+        {"id": "sf-2", "t": "choice", "q": "Omdat ik geen auto heb, ___.", "opts": ["ga ik met de fiets", "ik ga met de fiets", "ik met de fiets ga"], "a": "ga ik met de fiets", "why": "After the clause: verb, then subject."},
+        {"id": "sf-3", "t": "rewrite", "q": "Ik bel je als ik thuis ben.", "task": "Start with: Als ik thuis ben, …", "a": ["Als ik thuis ben, bel ik je.", "Als ik thuis ben, bel ik jou."], "why": "Verb, comma, verb: ben, bel ik."}
+      ],
+      "write": ["Write two sentences that start with Als … and two with Toen …"]
+    },
+    {
+      "id": "als-toen-wanneer",
+      "title": "als, toen or wanneer",
+      "nl": "Als, toen, wanneer",
+      "level": "B1",
+      "summary": "Three words for ‘when’.",
+      "body": [
+        {"table": {"head": ["word", "use", "example"], "rows": [
+          ["toen", "one moment or period in the **past**", "**Toen** ik in Amsterdam woonde, had ik geen auto."],
+          ["als", "present and future; things that happen every time; also ‘if’", "**Als** ik thuiskom, drink ik thee. **Als** het regent, blijf ik thuis."],
+          ["wanneer", "the question ‘when?’; in writing also like als", "**Wanneer** kom je? Ik weet niet **wanneer** hij komt."]
+        ]}},
+        {"p": "Past and **repeated**: use **als** (or wanneer): Vroeger, **als** ik naar oma ging, kreeg ik altijd een koekje."}
+      ],
+      "mistakes": [
+        {"wrong": "Als ik klein was, woonde ik in Turkije.", "right": "Toen ik klein was, woonde ik in Turkije.", "why": "One period in the past → toen."},
+        {"wrong": "Toen kom je?", "right": "Wanneer kom je?", "why": "Question → wanneer."}
+      ],
+      "exercises": [
+        {"id": "at-1", "t": "choice", "q": "___ ik in Nederland aankwam, regende het.", "opts": ["Toen", "Als", "Wanneer"], "a": "Toen", "why": "One moment in the past → toen."},
+        {"id": "at-2", "t": "choice", "q": "___ het mooi weer is, gaan we fietsen.", "opts": ["Als", "Toen"], "a": "Als", "why": "Present / every time → als."},
+        {"id": "at-3", "t": "choice", "q": "___ begint de cursus?", "opts": ["Wanneer", "Als", "Toen"], "a": "Wanneer", "why": "A question → wanneer."}
+      ],
+      "write": []
+    },
+    {
+      "id": "indirect-questions",
+      "title": "Indirect questions",
+      "nl": "Indirecte vragen",
+      "level": "B1",
+      "summary": "Weet jij waar hij woont? Ik vraag of hij komt.",
+      "body": [
+        {"p": "A question inside a sentence is a subordinate clause: **verb at the end**."},
+        {"table": {"head": ["direct", "indirect"], "rows": [
+          ["Waar **woont** hij?", "Weet jij waar hij **woont**?"],
+          ["Hoe laat **begint** de film?", "Ik vraag me af hoe laat de film **begint**."],
+          ["**Komt** hij morgen?", "Ik weet niet **of** hij morgen **komt**."]
+        ]}},
+        {"p": "A yes/no question becomes an **of**-clause."},
+        {"p": "Polite questions often use this form: **Kunt u mij zeggen hoe laat de trein vertrekt?**"}
+      ],
+      "mistakes": [
+        {"wrong": "Weet jij waar woont hij?", "right": "Weet jij waar hij woont?", "why": "Verb at the end."},
+        {"wrong": "Ik weet niet als hij komt.", "right": "Ik weet niet of hij komt.", "why": "whether = of."}
+      ],
+      "exercises": [
+        {"id": "iq-1", "t": "order", "en": "Do you know where the station is?", "a": ["Weet jij waar het station is?", "Weet je waar het station is?"], "why": "waar … is at the end."},
+        {"id": "iq-2", "t": "rewrite", "q": "Hoe laat vertrekt de trein?", "task": "Start with: Kunt u mij zeggen …", "a": ["Kunt u mij zeggen hoe laat de trein vertrekt?", "Kunt u me zeggen hoe laat de trein vertrekt?"], "why": "hoe laat … vertrekt at the end."},
+        {"id": "iq-3", "t": "choice", "q": "Ik vraag me af ___ hij thuis is.", "opts": ["of", "als", "dat"], "a": "of", "why": "Yes/no question → of."}
+      ],
+      "write": []
+    },
+    {
+      "id": "conj-adverbs",
+      "title": "daarom, toch, daarna: words that cause inversion",
+      "nl": "Bijwoorden die inversie geven",
+      "level": "B1",
+      "summary": "Het regent, daarom blijf ik thuis.",
+      "body": [
+        {"p": "Some linking words are not conjunctions but **adverbs**. They take **position 1**, so the **verb comes right after them**."},
+        {"table": {"head": ["word", "meaning", "example"], "rows": [
+          ["daarom", "that is why", "Ik ben ziek, **daarom blijf** ik thuis."],
+          ["toch", "still, anyway", "Het regent, maar ik **ga toch** fietsen. / Het is koud. **Toch ga** ik zwemmen."],
+          ["daarna / toen / dan", "after that / then", "Eerst eet ik. **Daarna ga** ik werken."],
+          ["bovendien", "moreover", "**Bovendien is** het te duur."],
+          ["anders", "otherwise", "Schiet op, **anders missen** we de trein."]
+        ]}},
+        {"h": "Three ways to say ‘because / so’"},
+        {"table": {"head": ["", "order"], "rows": [
+          ["Ik blijf thuis, **want** ik ben ziek.", "want: normal order"],
+          ["Ik blijf thuis **omdat** ik ziek **ben**.", "omdat: verb at the end"],
+          ["Ik ben ziek, **daarom blijf** ik thuis.", "daarom: verb right after"]
+        ]}}
+      ],
+      "mistakes": [
+        {"wrong": "Ik ben ziek, daarom ik blijf thuis.", "right": "Ik ben ziek, daarom blijf ik thuis.", "why": "daarom is position 1 → verb next."}
+      ],
+      "exercises": [
+        {"id": "ca-1", "t": "choice", "q": "Ik heb geen geld, daarom ___.", "opts": ["koop ik niets", "ik koop niets", "ik niets koop"], "a": "koop ik niets", "why": "daarom + verb + subject."},
+        {"id": "ca-2", "t": "order", "en": "I am ill, that's why I am staying home.", "a": ["Ik ben ziek, daarom blijf ik thuis."], "why": "daarom in position 1 → blijf ik."},
+        {"id": "ca-3", "t": "choice", "q": "Het is koud. Toch ___ zwemmen.", "opts": ["gaan we", "we gaan", "we gaan toch"], "a": "gaan we", "why": "Toch in position 1 → verb next."}
+      ],
+      "write": ["Write a sentence with daarom and one with toch."]
+    }
+  ]
+}

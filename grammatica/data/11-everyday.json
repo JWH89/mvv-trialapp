@@ -1,0 +1,74 @@
+{
+  "id": "everyday",
+  "title": "Numbers and time",
+  "nl": "Getallen en tijd",
+  "intro": "Counting, prices, telling the time (watch out for half!) and dates.",
+  "topics": [
+    {
+      "id": "numbers",
+      "title": "Numbers",
+      "nl": "Getallen",
+      "level": "A1",
+      "summary": "eenentwintig: the unit comes first. Ordinals: eerste, tweede, derde.",
+      "body": [
+        {"table": {"head": ["", "", "", ""], "rows": [
+          ["1 een", "6 zes", "11 elf", "16 zestien"],
+          ["2 twee", "7 zeven", "12 twaalf", "17 zeventien"],
+          ["3 drie", "8 acht", "13 dertien", "18 achttien"],
+          ["4 vier", "9 negen", "14 veertien", "19 negentien"],
+          ["5 vijf", "10 tien", "15 vijftien", "20 twintig"]
+        ]}},
+        {"p": "Tens: 30 dertig, 40 **veertig**, 50 vijftig, 60 zestig, 70 zeventig, 80 **tachtig**, 90 negentig, 100 honderd, 1000 duizend."},
+        {"p": "From 21: **unit + en + ten**, written as one word: 21 **eenentwintig**, 35 **vijfendertig**. Use **ë** after e: 22 **tweeëntwintig**, 23 **drieëntwintig**."},
+        {"p": "Prices: €2,50 = **twee euro vijftig**. Dutch writes a decimal **comma**. Years: 1998 = negentienhonderdachtennegentig; 2026 = tweeduizendzesentwintig."},
+        {"h": "First, second, third"},
+        {"p": "**eerste, tweede, derde, vierde, vijfde, zesde, zevende, achtste, negende, tiende** … up to 19 **-de**; from 20 **-ste**: twintig**ste**, honderd**ste**."}
+      ],
+      "mistakes": [
+        {"wrong": "twintig een", "right": "eenentwintig", "why": "Unit first, with en, one word."},
+        {"wrong": "drieentwintig", "right": "drieëntwintig", "why": "ë after e."}
+      ],
+      "exercises": [
+        {"id": "nu-1", "t": "type", "q": "Write in words: 21", "a": ["eenentwintig"], "why": "een + en + twintig."},
+        {"id": "nu-2", "t": "type", "q": "Write in words: 48", "a": ["achtenveertig"], "why": "acht + en + veertig."},
+        {"id": "nu-3", "t": "choice", "q": "Write in words: 23", "opts": ["drieëntwintig", "drieentwintig", "twintigdrie"], "a": "drieëntwintig", "why": "ë after e."},
+        {"id": "nu-4", "t": "type", "q": "Mijn verjaardag is op de ___ (3rd) mei.", "a": ["derde"], "why": "3rd = derde."}
+      ],
+      "write": []
+    },
+    {
+      "id": "time-dates",
+      "title": "Telling the time and dates",
+      "nl": "De klok en de datum",
+      "level": "A1",
+      "summary": "half vier = 3:30! Dates: op 5 mei.",
+      "body": [
+        {"table": {"head": ["time", "Dutch"], "rows": [
+          ["3:00", "drie uur"],
+          ["3:05", "vijf over drie"],
+          ["3:15", "kwart over drie"],
+          ["3:25", "vijf voor half vier"],
+          ["3:30", "**half vier** (half to four!)"],
+          ["3:35", "vijf over half vier"],
+          ["3:45", "kwart voor vier"],
+          ["3:50", "tien voor vier"]
+        ]}},
+        {"tip": "**half** always points to the **next** hour: half vier = 3:30, half acht = 7:30."},
+        {"p": "At a time: **om** drie uur. Officially (trains, appointments) people also say **15.30 uur**: vijftien uur dertig."},
+        {"p": "Days and months have **no capital**: maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag; januari … december."},
+        {"p": "Dates: **op** 5 mei; Het is vandaag 21 oktober. Written: 21-10-2026 (day first)."}
+      ],
+      "mistakes": [
+        {"wrong": "half drie = 3:30", "right": "half vier = 3:30", "why": "half points to the next hour."},
+        {"wrong": "Maandag (in the middle of a sentence)", "right": "maandag", "why": "No capital for days and months."}
+      ],
+      "exercises": [
+        {"id": "td-1", "t": "choice", "q": "Het is 7:30. Het is ___.", "opts": ["half acht", "half zeven", "zeven en half"], "a": "half acht", "why": "half points to the next hour."},
+        {"id": "td-2", "t": "choice", "q": "Het is 9:45. Het is ___.", "opts": ["kwart voor tien", "kwart over negen", "kwart voor negen"], "a": "kwart voor tien", "why": "15 minutes before ten."},
+        {"id": "td-3", "t": "choice", "q": "Het is 4:25. Het is ___.", "opts": ["vijf voor half vijf", "vijf over half vier", "vijf voor half vier"], "a": "vijf voor half vijf", "why": "Five minutes before half five (4:30)."},
+        {"id": "td-4", "t": "choice", "q": "De afspraak is ___ 3 juni.", "opts": ["op", "in", "om"], "a": "op", "why": "Dates → op."}
+      ],
+      "write": ["Write your daily schedule with times (om half acht …)."]
+    }
+  ]
+}

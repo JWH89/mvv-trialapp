@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "files": [
+    "data/01-spelling.json",
+    "data/02-nouns.json",
+    "data/03-pronouns.json",
+    "data/04-verbs-present.json",
+    "data/05-verbs-past.json",
+    "data/06-verbs-more.json",
+    "data/07-adjectives.json",
+    "data/08-word-order.json",
+    "data/09-negation.json",
+    "data/10-small-words.json",
+    "data/11-everyday.json"
+  ],
+  "path": [
+    "v2", "articles", "subject-pronouns", "present-regular", "present-irregular", "article-een",
+    "plural", "questions", "niet-geen", "possessives", "object-pronouns", "numbers", "time-dates",
+    "demonstratives", "question-words", "modals", "verb-bracket", "adjective-endings", "imperative",
+    "spelling-vowels", "spelling-fvsz", "perfect",
+    "hebben-zijn", "separable", "coordinating", "strong-verbs", "niet-position", "comparison",
+    "adverbs-graag", "prepositions", "diminutives", "reflexive", "future", "subordinate", "simple-past",
+    "position-verbs", "kennen-weten", "progressive", "compounds", "other-negatives", "indefinite",
+    "middle-field", "sub-first", "als-toen-wanneer", "perfect-vs-past", "relative", "indirect-questions",
+    "conj-adverbs", "te-infinitive", "conditional", "past-perfect", "prepositional-verbs", "er",
+    "pronominal-adverbs", "al-nog-pas", "particles", "passive", "verb-clusters", "laten"
+  ],
+  "more": [
+    {"title": "Lagelands grammar exercises (UCL)", "url": "https://resources.clie.ucl.ac.uk/learning-resources/online-dutch/lagelands-grammar/exerc_index.php", "note": "Free self-correcting exercises for every grammar topic."},
+    {"title": "e-ANS: the complete Dutch reference grammar", "url": "https://e-ans.ivdnt.org/", "note": "In Dutch. For when you want every detail."},
+    {"title": "Woordenlijst (official spelling, de/het)", "url": "https://woordenlijst.org/", "note": "Look up whether a word is de or het, and its plural."}
+  ]
+}

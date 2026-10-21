@@ -1,0 +1,208 @@
+{
+  "id": "small-words",
+  "title": "Small words",
+  "nl": "Kleine woorden",
+  "intro": "Prepositions, verbs with a fixed preposition, er, erop/daarmee/waarover, al/nog/pas, and the little words that make Dutch sound natural.",
+  "topics": [
+    {
+      "id": "prepositions",
+      "title": "Prepositions of place and time",
+      "nl": "Voorzetsels",
+      "level": "A2",
+      "summary": "in, op, aan, bij, naar, uit, van, om, over, sinds …",
+      "body": [
+        {"h": "Place"},
+        {"table": {"head": ["word", "meaning", "example"], "rows": [
+          ["in", "in, inside", "**in** de kamer, **in** Utrecht"],
+          ["op", "on (top); at some places", "**op** tafel, **op** school, **op** het werk, **op** het station"],
+          ["aan", "on (a side), at", "**aan** de muur, **aan** tafel, **aan** zee"],
+          ["bij", "at (someone's place), near", "**bij** de dokter, **bij** mijn moeder, **bij** het station"],
+          ["naar", "to (direction)", "**naar** huis, **naar** de dokter"],
+          ["uit", "out of; from (origin)", "**uit** de kast; Ik kom **uit** Iran."],
+          ["van", "from, of", "de trein **van** Utrecht, een vriend **van** mij"],
+          ["naast / tussen / onder / boven / achter / voor / tegenover", "next to / between / under / above / behind / in front of / opposite", "**naast** de bank, **tegenover** de kerk"]
+        ]}},
+        {"h": "Time"},
+        {"table": {"head": ["word", "use", "example"], "rows": [
+          ["om", "clock time", "**om** acht uur"],
+          ["op", "days and dates", "**op** maandag, **op** 5 mei"],
+          ["in", "months, seasons, years", "**in** mei, **in** de zomer, **in** 2026"],
+          ["over", "in (from now)", "**over** twee weken"],
+          ["geleden", "ago (after the time)", "twee jaar **geleden**"],
+          ["sinds", "since", "**sinds** maart"],
+          ["van … tot", "from … until", "**van** negen **tot** vijf"]
+        ]}}
+      ],
+      "mistakes": [
+        {"wrong": "Ik ga naar huis om drie dagen.", "right": "Ik ga over drie dagen naar huis.", "why": "in (from now) = over."},
+        {"wrong": "Ik ben bij school.", "right": "Ik ben op school.", "why": "op school, op het werk."},
+        {"wrong": "geleden twee jaar", "right": "twee jaar geleden", "why": "geleden comes after."}
+      ],
+      "exercises": [
+        {"id": "pp2-1", "t": "choice", "q": "De les begint ___ negen uur.", "opts": ["om", "op", "in"], "a": "om", "why": "Clock time → om."},
+        {"id": "pp2-2", "t": "choice", "q": "Ik werk niet ___ zondag.", "opts": ["op", "in", "om"], "a": "op", "why": "Days → op."},
+        {"id": "pp2-3", "t": "choice", "q": "Ik ga morgen ___ de tandarts.", "opts": ["naar", "bij", "op"], "a": "naar", "why": "Direction → naar."},
+        {"id": "pp2-4", "t": "choice", "q": "Ik kom ___ twee weken terug.", "en": "I'll be back in two weeks.", "opts": ["over", "in", "na"], "a": "over", "why": "in (from now) = over."},
+        {"id": "pp2-5", "t": "choice", "q": "Het schilderij hangt ___ de muur.", "opts": ["aan", "op", "in"], "a": "aan", "why": "On a wall (side) → aan."}
+      ],
+      "write": ["Describe where you live and where you work, with prepositions."]
+    },
+    {
+      "id": "prepositional-verbs",
+      "title": "Verbs with a fixed preposition",
+      "nl": "Vaste voorzetsels",
+      "level": "B1",
+      "summary": "wachten op, denken aan, houden van …",
+      "body": [
+        {"p": "Many verbs and adjectives take a fixed preposition. Learn them together."},
+        {"table": {"head": ["Dutch", "English"], "rows": [
+          ["wachten **op**", "wait for"],
+          ["denken **aan**", "think of / about"],
+          ["denken **over**", "think about (consider)"],
+          ["houden **van**", "love, like"],
+          ["kijken **naar**", "look at, watch"],
+          ["luisteren **naar**", "listen to"],
+          ["praten **over**", "talk about"],
+          ["beginnen / stoppen **met**", "start / stop (doing)"],
+          ["zorgen **voor**", "take care of"],
+          ["vragen **om**", "ask for"],
+          ["vragen **naar**", "ask about"],
+          ["genieten **van**", "enjoy"],
+          ["lijken **op**", "look like"],
+          ["klagen **over**", "complain about"],
+          ["zich ergeren **aan**", "be annoyed by"],
+          ["zich verheugen **op**", "look forward to"],
+          ["bang zijn **voor**", "be afraid of"],
+          ["trots zijn **op**", "be proud of"],
+          ["boos zijn **op**", "be angry with"],
+          ["getrouwd zijn **met**", "be married to"],
+          ["geïnteresseerd zijn **in**", "be interested in"]
+        ]}}
+      ],
+      "mistakes": [
+        {"wrong": "Ik wacht voor de bus.", "right": "Ik wacht op de bus.", "why": "wachten op."},
+        {"wrong": "Ik ben getrouwd aan hem.", "right": "Ik ben met hem getrouwd.", "why": "getrouwd met."}
+      ],
+      "exercises": [
+        {"id": "pv2-1", "t": "choice", "q": "Ik wacht ___ de bus.", "opts": ["op", "voor", "aan"], "a": "op", "why": "wachten op."},
+        {"id": "pv2-2", "t": "choice", "q": "Ik denk vaak ___ mijn familie.", "opts": ["aan", "op", "van"], "a": "aan", "why": "denken aan."},
+        {"id": "pv2-3", "t": "choice", "q": "Ze is getrouwd ___ een Nederlander.", "opts": ["met", "aan", "op"], "a": "met", "why": "getrouwd met."},
+        {"id": "pv2-4", "t": "choice", "q": "Mijn dochter lijkt ___ haar vader.", "opts": ["op", "aan", "naar"], "a": "op", "why": "lijken op."}
+      ],
+      "write": ["Write what you are looking forward to (Ik verheug me op …)."]
+    },
+    {
+      "id": "er",
+      "title": "The word er",
+      "nl": "Het woordje er",
+      "level": "B1",
+      "summary": "there, ‘there is’, ‘of them’, and in passives.",
+      "body": [
+        {"table": {"head": ["use", "example", "English"], "rows": [
+          ["1. place (unstressed ‘there’)", "Ik woon **er** al vijf jaar.", "I have lived there for five years."],
+          ["2. there is / there are", "**Er** is een probleem. **Er** zijn veel mensen.", "There is a problem."],
+          ["3. with a number: ‘of them’", "Ik heb **er** drie.", "I have three (of them)."],
+          ["4. with a preposition", "Ik denk **erover** na.", "I'm thinking about it."],
+          ["5. passive without subject", "**Er** wordt gebeld.", "Someone is ringing."]
+        ]}},
+        {"p": "Use **er is / er zijn** when you say that something exists or is somewhere, with an indefinite subject: **Er staat** een man voor de deur."},
+        {"p": "With a number or quantity you **must** use er: Hoeveel kinderen heb je? Ik heb **er** twee."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik heb twee.", "right": "Ik heb er twee.", "why": "With a number you need er."},
+        {"wrong": "Is een probleem.", "right": "Er is een probleem.", "why": "‘There is’ needs er."}
+      ],
+      "exercises": [
+        {"id": "er-1", "t": "choice", "q": "Hoeveel broers heb je? — Ik heb ___ drie.", "opts": ["er", "het", "ze"], "a": "er", "why": "Number → er."},
+        {"id": "er-2", "t": "choice", "q": "___ zijn veel fietsen in Nederland.", "opts": ["Er", "Het", "Daar"], "a": "Er", "why": "There are = er zijn."},
+        {"id": "er-3", "t": "translate", "q": "There is a cat in the garden.", "a": ["Er is een kat in de tuin.", "Er zit een kat in de tuin.", "Er loopt een kat in de tuin.", "In de tuin is een kat.", "In de tuin zit een kat."], "why": "Er is / er zit + indefinite subject."}
+      ],
+      "write": []
+    },
+    {
+      "id": "pronominal-adverbs",
+      "title": "erop, daarmee, waarover",
+      "nl": "Voornaamwoordelijke bijwoorden",
+      "level": "B1",
+      "summary": "For things: not ‘op het’ but ‘erop’.",
+      "body": [
+        {"p": "After a preposition, Dutch does not use **het, dat, wat** for things. Instead: **er / daar / hier / waar + preposition**."},
+        {"table": {"head": ["not", "but", "example"], "rows": [
+          ["op het", "**erop**", "Ik wacht **erop**."],
+          ["met dat", "**daarmee**", "**Daarmee** ben ik blij."],
+          ["over wat", "**waarover**", "**Waarover** praten jullie?"],
+          ["met dit", "**hiermee**", "**Hiermee** kun je betalen."]
+        ]}},
+        {"p": "**met → mee**, **tot → toe**: ermee, daarmee, waarmee, ertoe."},
+        {"p": "The two parts are often split, with the preposition near the end: **Waar** wacht je **op**? Ik ben **er** blij **mee**. **Daar** heb ik geen zin **in**."},
+        {"p": "For **people**, use a normal pronoun: Ik wacht **op hem**. **Met wie** praat je?"}
+      ],
+      "mistakes": [
+        {"wrong": "Ik ben blij met het.", "right": "Ik ben er blij mee.", "why": "Thing after preposition → er + mee."},
+        {"wrong": "Waarmet schrijf je?", "right": "Waarmee schrijf je?", "why": "met → mee."}
+      ],
+      "exercises": [
+        {"id": "pa2-1", "t": "choice", "q": "Mooie fiets! Ben je ___ blij ___?", "opts": ["er … mee", "het … met", "er … met"], "a": "er … mee", "why": "Thing → er + mee."},
+        {"id": "pa2-2", "t": "choice", "q": "___ denk je aan?", "opts": ["Waar", "Wat", "Aan wat"], "a": "Waar", "why": "Waar … aan."},
+        {"id": "pa2-3", "t": "choice", "q": "Mijn vriendin? Ik wacht ___.", "opts": ["op haar", "erop", "daarop"], "a": "op haar", "why": "A person → op haar."}
+      ],
+      "write": []
+    },
+    {
+      "id": "al-nog-pas",
+      "title": "al, nog, pas, maar",
+      "nl": "Al, nog, pas, maar",
+      "level": "B1",
+      "summary": "Small time words that change meaning a lot.",
+      "body": [
+        {"table": {"head": ["word", "meaning", "example"], "rows": [
+          ["al", "already; for (a period up to now)", "Ik heb **al** gegeten. Ik woon hier **al** twee jaar."],
+          ["nog", "still; (with niet/geen) yet; more", "Hij slaapt **nog**. Ik heb **nog** niet gegeten. **Nog** een koffie?"],
+          ["pas", "only (just); not until", "Hij is **pas** 18. De winkel gaat **pas** om tien uur open."],
+          ["maar", "only (a small amount)", "Ik heb **maar** vijf euro."],
+          ["net", "just (a moment ago)", "Ik ben **net** thuis."]
+        ]}},
+        {"tip": "‘I have lived here for two years’ uses the present tense in Dutch: Ik **woon** hier **al** twee jaar."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik heb hier twee jaar gewoond. (and still live here)", "right": "Ik woon hier al twee jaar.", "why": "Still true now → present + al."},
+        {"wrong": "Hij is alleen 18.", "right": "Hij is pas 18.", "why": "‘only’ for age/time → pas."}
+      ],
+      "exercises": [
+        {"id": "an-1", "t": "translate", "q": "I have lived in the Netherlands for three years.", "a": ["Ik woon al drie jaar in Nederland.", "Ik woon nu al drie jaar in Nederland."], "why": "Present tense + al."},
+        {"id": "an-2", "t": "choice", "q": "De bus komt ___ om tien uur, niet eerder.", "opts": ["pas", "al", "nog"], "a": "pas", "why": "not until = pas."},
+        {"id": "an-3", "t": "choice", "q": "Wil je ___ een kopje thee?", "en": "Would you like another cup of tea?", "opts": ["nog", "al", "pas"], "a": "nog", "why": "another = nog een."}
+      ],
+      "write": ["How long have you been learning Dutch? Answer with al."]
+    },
+    {
+      "id": "particles",
+      "title": "even, maar, eens, toch, wel, hoor",
+      "nl": "Modale partikels",
+      "level": "B1",
+      "summary": "Tiny words that make Dutch sound friendly and natural.",
+      "body": [
+        {"p": "These words are hard to translate, but they change the tone. They are everywhere in spoken Dutch."},
+        {"table": {"head": ["word", "effect", "example"], "rows": [
+          ["even", "makes a request small and polite", "Kun je **even** helpen? Ik ga **even** naar de winkel."],
+          ["maar", "permission, encouragement", "Kom **maar** binnen. Ga **maar** zitten."],
+          ["eens", "softens; ‘just’", "Kijk **eens**! Probeer het **eens**."],
+          ["toch", "‘surely’, ‘right?’ — seeking agreement", "Je komt **toch** ook? Dat is **toch** niet waar?"],
+          ["wel", "contrast, reassurance", "Ik heb geen auto, maar **wel** een fiets. Het komt **wel** goed."],
+          ["hoor", "friendly, reassuring (end of sentence)", "Het is goed, **hoor**. Dank je, **hoor**."],
+          ["gewoon", "‘just’, ‘simply’", "Doe **gewoon** normaal."]
+        ]}},
+        {"p": "Combinations are common: **Kom maar even** binnen. **Kijk maar eens**."}
+      ],
+      "mistakes": [
+        {"wrong": "Geef me het zout.", "right": "Geef me even het zout. / Kun je even het zout geven?", "why": "Without even, a command sounds rude."}
+      ],
+      "exercises": [
+        {"id": "pt-1", "t": "choice", "q": "Kom ___ binnen, de deur is open.", "opts": ["maar", "toch", "hoor"], "a": "maar", "why": "Permission → maar."},
+        {"id": "pt-2", "t": "choice", "q": "Kun je ___ helpen?", "opts": ["even", "toch", "wel"], "a": "even", "why": "A small, polite request → even."},
+        {"id": "pt-3", "t": "choice", "q": "Ik heb geen tijd, maar ik kom ___ even langs.", "opts": ["wel", "maar", "eens"], "a": "wel", "why": "Contrast with geen → wel."}
+      ],
+      "write": []
+    }
+  ]
+}

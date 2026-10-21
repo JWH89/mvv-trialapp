@@ -1,0 +1,236 @@
+{
+  "id": "verbs-past",
+  "title": "Verbs: past",
+  "nl": "Werkwoorden: verleden tijd",
+  "intro": "Ik heb gewerkt, ik werkte, ik was gegaan: the past tenses and the irregular verbs you need for them.",
+  "topics": [
+    {
+      "id": "perfect",
+      "title": "Perfect tense: ik heb gewerkt",
+      "nl": "De voltooide tijd",
+      "level": "A1",
+      "summary": "hebben/zijn + ge-stem-t/d. The everyday way to talk about the past.",
+      "body": [
+        {"p": "In speech, Dutch mostly uses the perfect for the past: **Ik heb gisteren gewerkt** = I worked yesterday."},
+        {"p": "Form: **hebben** (or zijn) in position 2 + the **past participle at the end**."},
+        {"h": "Regular participle: ge + stem + t or d"},
+        {"p": "If the stem ends in one of the letters of **’t kofschip** (t, k, f, s, ch, p), the participle ends in **-t**. Otherwise **-d**."},
+        {"table": {"head": ["infinitive", "stem", "participle"], "rows": [
+          ["werken", "werk (k)", "**ge**werk**t**"],
+          ["maken", "maak (k)", "**ge**maak**t**"],
+          ["fietsen", "fiets (s)", "**ge**fiets**t**"],
+          ["wonen", "woon (n)", "**ge**woon**d**"],
+          ["horen", "hoor (r)", "**ge**hoor**d**"],
+          ["leven", "leef — but the infinitive has v", "**ge**leef**d**"],
+          ["reizen", "reis — but the infinitive has z", "**ge**reis**d**"]
+        ]}},
+        {"tip": "For leven and reizen: look at the letter in the **infinitive** (v, z), not ‘t kofschip’ letters f, s. So geleefd, gereisd."},
+        {"p": "If the stem already ends in t or d, don't add another: **gepraat** (praten), **gebeurd** (gebeuren), **gezet** (zetten)."},
+        {"p": "No **ge-** for verbs starting with be-, ge-, her-, ont-, ver-, er-: **betaald**, **verteld**, **herhaald**. Separable verbs get ge- in the middle: **opgebeld**."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik heb gewerkt gisteren.", "right": "Ik heb gisteren gewerkt.", "why": "The participle goes to the very end."},
+        {"wrong": "gewoont", "right": "gewoond", "why": "n is not in ’t kofschip → -d."},
+        {"wrong": "geleeft", "right": "geleefd", "why": "The infinitive has v → -d."}
+      ],
+      "exercises": [
+        {"id": "pf-1", "t": "type", "q": "Ik heb gisteren hard ___. (werken)", "a": ["gewerkt"], "why": "k is in ’t kofschip → -t."},
+        {"id": "pf-2", "t": "type", "q": "Wij hebben in Utrecht ___. (wonen)", "a": ["gewoond"], "why": "n is not in ’t kofschip → -d."},
+        {"id": "pf-3", "t": "choice", "q": "Ze hebben veel ___. (reizen)", "opts": ["gereisd", "gereist", "gereizd"], "a": "gereisd", "why": "The infinitive has z → -d; written s."},
+        {"id": "pf-4", "t": "order", "en": "I bought a bike yesterday.", "a": ["Ik heb gisteren een fiets gekocht.", "Gisteren heb ik een fiets gekocht."], "why": "heb in position 2, gekocht at the end."},
+        {"id": "pf-5", "t": "rewrite", "q": "Ik maak het eten.", "task": "Put it in the perfect tense.", "a": ["Ik heb het eten gemaakt."], "why": "heb + gemaakt at the end."},
+        {"id": "pf-6", "t": "choice", "q": "Ik heb de rekening al ___.", "opts": ["betaald", "gebetaald", "betaalt"], "a": "betaald", "why": "be- verbs: no ge-."}
+      ],
+      "write": ["Write three sentences about what you did yesterday (perfect tense)."]
+    },
+    {
+      "id": "hebben-zijn",
+      "title": "hebben or zijn in the perfect",
+      "nl": "Hebben of zijn",
+      "level": "A2",
+      "summary": "Most verbs take hebben. Movement to a place and change of state take zijn.",
+      "body": [
+        {"p": "Most verbs use **hebben**. These use **zijn**:"},
+        {"list": [
+          "Change of place, with a goal: Ik **ben** naar huis **gegaan**. Hij **is** naar Nederland **gekomen**.",
+          "Change of state: Ze **is** ziek **geworden**. Het kind **is** **gegroeid**. Hij **is** **getrouwd**.",
+          "These verbs always: **zijn** (ik ben geweest), **blijven** (gebleven), **worden**, **gebeuren**, **beginnen**, **vertrekken**, **sterven**, **vallen**, **verhuizen**."
+        ]},
+        {"h": "Movement verbs: both"},
+        {"p": "Verbs like **fietsen, lopen, rijden, zwemmen, vliegen** use **hebben** when you just do the activity, and **zijn** when you go somewhere:"},
+        {"ex": [
+          ["Ik heb een uur gefietst.", "I cycled for an hour."],
+          ["Ik ben naar mijn werk gefietst.", "I cycled to work."]
+        ]}
+      ],
+      "mistakes": [
+        {"wrong": "Ik heb naar huis gegaan.", "right": "Ik ben naar huis gegaan.", "why": "gaan takes zijn."},
+        {"wrong": "Ik heb in Spanje geweest.", "right": "Ik ben in Spanje geweest.", "why": "zijn takes zijn: ik ben geweest."}
+      ],
+      "exercises": [
+        {"id": "hz-1", "t": "choice", "q": "Ik ___ gisteren naar de markt gegaan.", "opts": ["ben", "heb"], "a": "ben", "why": "gaan → zijn."},
+        {"id": "hz-2", "t": "choice", "q": "Wij ___ vorig jaar verhuisd.", "opts": ["zijn", "hebben"], "a": "zijn", "why": "verhuizen → zijn."},
+        {"id": "hz-3", "t": "choice", "q": "Ik ___ een uur gezwommen.", "opts": ["heb", "ben"], "a": "heb", "why": "Just the activity, no goal → hebben."},
+        {"id": "hz-4", "t": "choice", "q": "Ze ___ naar de overkant gezwommen.", "opts": ["is", "heeft"], "a": "is", "why": "A goal (to the other side) → zijn."},
+        {"id": "hz-5", "t": "translate", "q": "I have been to Amsterdam.", "a": ["Ik ben in Amsterdam geweest.", "Ik ben naar Amsterdam geweest."], "why": "zijn → ik ben geweest."}
+      ],
+      "write": ["Write where you have been and where you have gone this month (ik ben … geweest / gegaan)."]
+    },
+    {
+      "id": "strong-verbs",
+      "title": "Irregular (strong) verbs",
+      "nl": "Sterke en onregelmatige werkwoorden",
+      "level": "A2",
+      "summary": "schrijven – schreef – geschreven. The 40 you need most.",
+      "body": [
+        {"p": "Strong verbs change their vowel in the past, and the participle usually ends in **-en**. There are patterns, but learn the three forms together."},
+        {"table": {"head": ["infinitive", "past (sg / pl)", "participle", "English"], "rows": [
+          ["zijn", "was / waren", "(is) geweest", "be"],
+          ["hebben", "had / hadden", "gehad", "have"],
+          ["gaan", "ging / gingen", "(is) gegaan", "go"],
+          ["komen", "kwam / kwamen", "(is) gekomen", "come"],
+          ["doen", "deed / deden", "gedaan", "do"],
+          ["zien", "zag / zagen", "gezien", "see"],
+          ["staan", "stond / stonden", "gestaan", "stand"],
+          ["eten", "at / aten", "gegeten", "eat"],
+          ["drinken", "dronk / dronken", "gedronken", "drink"],
+          ["geven", "gaf / gaven", "gegeven", "give"],
+          ["lezen", "las / lazen", "gelezen", "read"],
+          ["schrijven", "schreef / schreven", "geschreven", "write"],
+          ["blijven", "bleef / bleven", "(is) gebleven", "stay"],
+          ["kijken", "keek / keken", "gekeken", "look"],
+          ["rijden", "reed / reden", "gereden", "drive"],
+          ["nemen", "nam / namen", "genomen", "take"],
+          ["spreken", "sprak / spraken", "gesproken", "speak"],
+          ["vinden", "vond / vonden", "gevonden", "find"],
+          ["beginnen", "begon / begonnen", "(is) begonnen", "begin"],
+          ["zitten", "zat / zaten", "gezeten", "sit"],
+          ["liggen", "lag / lagen", "gelegen", "lie"],
+          ["slapen", "sliep / sliepen", "geslapen", "sleep"],
+          ["lopen", "liep / liepen", "gelopen", "walk"],
+          ["roepen", "riep / riepen", "geroepen", "call"],
+          ["vallen", "viel / vielen", "(is) gevallen", "fall"],
+          ["houden", "hield / hielden", "gehouden", "hold"],
+          ["helpen", "hielp / hielpen", "geholpen", "help"],
+          ["sterven", "stierf / stierven", "(is) gestorven", "die"],
+          ["kiezen", "koos / kozen", "gekozen", "choose"],
+          ["vliegen", "vloog / vlogen", "gevlogen", "fly"],
+          ["sluiten", "sloot / sloten", "gesloten", "close"],
+          ["dragen", "droeg / droegen", "gedragen", "carry, wear"],
+          ["weten", "wist / wisten", "geweten", "know"],
+          ["kopen", "kocht / kochten", "gekocht", "buy"],
+          ["zoeken", "zocht / zochten", "gezocht", "look for"],
+          ["denken", "dacht / dachten", "gedacht", "think"],
+          ["brengen", "bracht / brachten", "gebracht", "bring"],
+          ["zeggen", "zei / zeiden", "gezegd", "say"],
+          ["vragen", "vroeg / vroegen", "gevraagd", "ask"],
+          ["kunnen", "kon / konden", "gekund", "can"],
+          ["willen", "wilde / wilden", "gewild", "want"],
+          ["mogen", "mocht / mochten", "gemogen", "may"],
+          ["moeten", "moest / moesten", "gemoeten", "must"],
+          ["zullen", "zou / zouden", "—", "shall"]
+        ]}},
+        {"tip": "(is) = this verb takes zijn in the perfect."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik heb gegaat.", "right": "Ik ben gegaan.", "why": "gaan is irregular and takes zijn."},
+        {"wrong": "Ik heb gekoopt.", "right": "Ik heb gekocht.", "why": "kopen → gekocht."},
+        {"wrong": "Ik heb gezegt.", "right": "Ik heb gezegd.", "why": "zeggen → gezegd."}
+      ],
+      "exercises": [
+        {"id": "st-1", "t": "type", "q": "Ik heb een brief ___. (schrijven)", "a": ["geschreven"], "why": "schrijven – schreef – geschreven."},
+        {"id": "st-2", "t": "type", "q": "Wat heb je ___? (eten)", "a": ["gegeten"], "why": "eten – at – gegeten."},
+        {"id": "st-3", "t": "choice", "q": "Ik heb nieuwe schoenen ___.", "opts": ["gekocht", "gekoopt", "gekopen"], "a": "gekocht", "why": "kopen – kocht – gekocht."},
+        {"id": "st-4", "t": "type", "q": "Hij heeft het niet ___. (zeggen)", "a": ["gezegd"], "why": "zeggen – zei – gezegd."},
+        {"id": "st-5", "t": "choice", "q": "Ik ___ thuis gebleven.", "opts": ["ben", "heb"], "a": "ben", "why": "blijven takes zijn."},
+        {"id": "st-6", "t": "type", "q": "Wij hebben goed ___. (slapen)", "a": ["geslapen"], "why": "slapen – sliep – geslapen."},
+        {"id": "st-7", "t": "type", "q": "Heb jij mijn sleutels ___? (zien)", "a": ["gezien"], "why": "zien – zag – gezien."}
+      ],
+      "write": []
+    },
+    {
+      "id": "simple-past",
+      "title": "Simple past: ik werkte, ik ging",
+      "nl": "De onvoltooid verleden tijd",
+      "level": "A2",
+      "summary": "-te/-de for regular verbs, a vowel change for strong ones.",
+      "body": [
+        {"h": "Regular verbs"},
+        {"p": "Stem + **-te(n)** if the stem ends in a ’t kofschip letter, otherwise **-de(n)**. Same rule as the participle."},
+        {"table": {"head": ["", "werken", "wonen", "leven"], "rows": [
+          ["ik / jij / hij", "werk**te**", "woon**de**", "leef**de**"],
+          ["wij / jullie / zij", "werk**ten**", "woon**den**", "leef**den**"]
+        ]}},
+        {"h": "Strong verbs"},
+        {"p": "Use the past form from the list; add **-en** in the plural (spelling rules apply): ik **ging**, wij **gingen**; ik **was**, wij **waren**; ik **schreef**, wij **schreven**."},
+        {"ex": [
+          ["Vroeger woonde ik in Turkije.", "I used to live in Turkey."],
+          ["Toen ik klein was, speelden we veel buiten.", "When I was little we played outside a lot."]
+        ]}
+      ],
+      "mistakes": [
+        {"wrong": "Ik werkde.", "right": "Ik werkte.", "why": "k is in ’t kofschip → -te."},
+        {"wrong": "Wij was moe.", "right": "Wij waren moe.", "why": "Plural: waren."}
+      ],
+      "exercises": [
+        {"id": "sp2-1", "t": "type", "q": "Vroeger ___ ik in Marokko. (wonen)", "a": ["woonde"], "why": "n → -de."},
+        {"id": "sp2-2", "t": "type", "q": "Gisteren ___ hij de hele dag. (werken)", "a": ["werkte"], "why": "k → -te."},
+        {"id": "sp2-3", "t": "choice", "q": "Wij ___ erg moe.", "opts": ["waren", "was", "werden"], "a": "waren", "why": "zijn, plural past: waren."},
+        {"id": "sp2-4", "t": "type", "q": "Zij ___ naar huis. (gaan, she, past)", "a": ["ging"], "why": "gaan – ging."},
+        {"id": "sp2-5", "t": "choice", "q": "Toen ik jong was, ___ ik veel. (lezen)", "opts": ["las", "leesde", "lees"], "a": "las", "why": "lezen – las – gelezen."}
+      ],
+      "write": ["Write two sentences about your childhood with vroeger (simple past)."]
+    },
+    {
+      "id": "perfect-vs-past",
+      "title": "Perfect or simple past?",
+      "nl": "Voltooide of onvoltooide verleden tijd",
+      "level": "B1",
+      "summary": "Start with the perfect; tell the story on in the simple past.",
+      "body": [
+        {"p": "Both talk about the past. Choose like this:"},
+        {"table": {"head": ["perfect (heb gewerkt)", "simple past (werkte)"], "rows": [
+          ["A finished event, the fact that it happened", "A story: several events after each other"],
+          ["Normal in conversation", "Normal in written stories and the news"],
+          ["Ik **heb** mijn moeder **gebeld**.", "Ik **belde** mijn moeder en **vertelde** het nieuws."],
+          ["Opening a story: Gisteren **heb** ik iets geks **meegemaakt**.", "Continuing: Ik **stond** op het station en opeens **zag** ik …"]
+        ]}},
+        {"p": "For **descriptions and situations** in the past (how things were), and with **zijn, hebben and modal verbs**, the simple past is common: Ik **was** moe. Ik **had** geen tijd. Ik **moest** werken."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik heb moe geweest, dus ik ben thuis gebleven.", "right": "Ik was moe, dus ik ben thuis gebleven.", "why": "A situation (being tired) → was."}
+      ],
+      "exercises": [
+        {"id": "pv-1", "t": "choice", "q": "Sorry dat ik niet kwam. Ik ___ ziek.", "opts": ["was", "ben geweest"], "a": "was", "why": "Describing a situation → simple past."},
+        {"id": "pv-2", "t": "choice", "q": "___ je het boek al ___?", "en": "Have you read the book yet?", "opts": ["Heb … gelezen", "Las … —"], "a": "Heb … gelezen", "why": "Asking whether something has happened → perfect."},
+        {"id": "pv-3", "t": "choice", "q": "Ik kon niet komen, want ik ___ werken.", "opts": ["moest", "heb gemoeten"], "a": "moest", "why": "Modal verbs in the past: usually simple past."}
+      ],
+      "write": ["Tell a short story about last weekend: start with the perfect, continue with the simple past."]
+    },
+    {
+      "id": "past-perfect",
+      "title": "Past perfect: ik had gewerkt",
+      "nl": "De voltooid verleden tijd",
+      "level": "B1",
+      "summary": "had/was + participle: something that happened before another past moment.",
+      "body": [
+        {"p": "Use **had** or **was** + participle for something that happened **before** another moment in the past."},
+        {"ex": [
+          ["Toen ik op het station kwam, was de trein al vertrokken.", "When I got to the station, the train had already left."],
+          ["Ik had nog nooit sneeuw gezien.", "I had never seen snow."]
+        ]},
+        {"p": "Choose had or was the same way as heb or ben."},
+        {"p": "It is also used for things that didn't happen (wishes and regrets): **Had** ik het maar **geweten**! (If only I had known!)"}
+      ],
+      "mistakes": [
+        {"wrong": "De trein had al vertrokken.", "right": "De trein was al vertrokken.", "why": "vertrekken takes zijn → was."}
+      ],
+      "exercises": [
+        {"id": "pp-1", "t": "choice", "q": "Toen ik thuiskwam, ___ mijn man al gegeten.", "opts": ["had", "was"], "a": "had", "why": "eten takes hebben → had."},
+        {"id": "pp-2", "t": "choice", "q": "De film ___ al begonnen.", "opts": ["was", "had"], "a": "was", "why": "beginnen takes zijn → was."},
+        {"id": "pp-3", "t": "type", "q": "Ik had hem nog nooit ___. (zien)", "a": ["gezien"], "why": "had + participle gezien."}
+      ],
+      "write": []
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "id": "pronouns",
+  "title": "Pronouns",
+  "nl": "Voornaamwoorden",
+  "intro": "ik, mij, mijn, zich, deze, wie, iemand, die: the small words that stand for people and things.",
+  "topics": [
+    {
+      "id": "subject-pronouns",
+      "title": "Subject pronouns, je and u",
+      "nl": "Persoonlijke voornaamwoorden (onderwerp)",
+      "level": "A1",
+      "summary": "ik, jij/je, u, hij, zij/ze, het, wij/we, jullie, zij/ze — and hij for de-things.",
+      "body": [
+        {"table": {"head": ["", "stressed", "unstressed", "English"], "rows": [
+          ["1 sg", "ik", "—", "I"],
+          ["2 sg", "jij", "je", "you (informal)"],
+          ["2 formal", "u", "—", "you (polite, singular and plural)"],
+          ["3 sg", "hij / zij / het", "— / ze / het", "he / she / it"],
+          ["1 pl", "wij", "we", "we"],
+          ["2 pl", "jullie", "—", "you (plural, informal)"],
+          ["3 pl", "zij", "ze", "they"]
+        ]}},
+        {"p": "In normal speech people use the **unstressed** forms (je, ze, we). Use the stressed form for contrast: **Jij** gaat, niet ik."},
+        {"h": "u: the polite you"},
+        {"p": "Use **u** with strangers, older people, officials and at the doctor. The verb is the same as for hij: **u werkt**, **u bent**, **u hebt / u heeft**."},
+        {"h": "Things: hij or het"},
+        {"p": "For a **de-word** thing say **hij**; for a **het-word** say **het**. For plurals: **ze**."},
+        {"ex": [
+          ["Waar is de sleutel? Hij ligt op tafel.", "Where is the key? It is on the table."],
+          ["Het boek? Het is van mij.", "The book? It is mine."],
+          ["Mijn ouders? Ze wonen in Rotterdam.", "My parents? They live in Rotterdam."]
+        ]}
+      ],
+      "mistakes": [
+        {"wrong": "De auto is oud, maar het rijdt goed.", "right": "De auto is oud, maar hij rijdt goed.", "why": "auto is a de-word, so it is hij."},
+        {"wrong": "U bent? Jij bent!", "right": "Kunt u mij helpen?", "why": "With a stranger, use u, not jij."}
+      ],
+      "exercises": [
+        {"id": "sp-1", "t": "choice", "q": "De auto is oud, maar ___ rijdt nog goed.", "opts": ["hij", "het", "ze"], "a": "hij", "why": "de auto → hij."},
+        {"id": "sp-2", "t": "choice", "q": "Het huis is groot. ___ heeft vier kamers.", "opts": ["Het", "Hij", "Ze"], "a": "Het", "why": "het huis → het."},
+        {"id": "sp-3", "t": "choice", "q": "Meneer, ___ u koffie?", "opts": ["wilt", "willen", "wilst"], "a": "wilt", "why": "u takes the same form as hij: u wilt."},
+        {"id": "sp-4", "t": "choice", "q": "Komen ___ morgen ook? (you, plural)", "opts": ["jullie", "jij", "u"], "a": "jullie", "why": "jullie = you, more than one person, informal."}
+      ],
+      "write": ["Write a sentence about where a thing in your house is. Use hij or het for the thing."]
+    },
+    {
+      "id": "object-pronouns",
+      "title": "Object pronouns",
+      "nl": "Persoonlijke voornaamwoorden (voorwerp)",
+      "level": "A1",
+      "summary": "mij/me, jou/je, u, hem, haar, het, ons, jullie, hen/hun/ze.",
+      "body": [
+        {"table": {"head": ["subject", "object", "example"], "rows": [
+          ["ik", "mij / me", "Hij helpt **me**."],
+          ["jij", "jou / je", "Ik bel **je** morgen."],
+          ["u", "u", "Ik zie **u** morgen."],
+          ["hij", "hem", "Ik ken **hem**."],
+          ["zij (she)", "haar", "Ik zie **haar**."],
+          ["het", "het", "Ik koop **het**."],
+          ["wij", "ons", "Zij bezoekt **ons**."],
+          ["jullie", "jullie", "Ik help **jullie**."],
+          ["zij (they)", "hen / hun / ze", "Ik zie **ze**."]
+        ]}},
+        {"p": "After a preposition use the stressed form: **met mij**, **voor jou**, **bij hem**."},
+        {"p": "In speech **ze** is normal for ‘them’. In writing, **hen** is the direct object and after prepositions, **hun** is the indirect object (to them). Most Dutch speakers mix these up, so ze is the safe choice."},
+        {"tip": "A **de-word thing** is **hem** too: Waar is mijn tas? Ik zie **hem** niet."}
+      ],
+      "mistakes": [
+        {"wrong": "Hij helpt ik.", "right": "Hij helpt mij / me.", "why": "ik is only the subject."},
+        {"wrong": "Mijn tas? Ik zie het niet.", "right": "Mijn tas? Ik zie hem niet.", "why": "de tas → hem."}
+      ],
+      "exercises": [
+        {"id": "op-1", "t": "choice", "q": "Ik bel ___ morgen. (him)", "opts": ["hem", "hij", "zijn"], "a": "hem", "why": "Object of bellen: hem."},
+        {"id": "op-2", "t": "choice", "q": "Waar is mijn jas? Ik zie ___ niet.", "opts": ["hem", "het", "hij"], "a": "hem", "why": "de jas → hem."},
+        {"id": "op-3", "t": "choice", "q": "Dit cadeau is voor ___. (you, informal)", "opts": ["jou", "jij", "jouw"], "a": "jou", "why": "After a preposition: jou."},
+        {"id": "op-4", "t": "translate", "q": "Can you help me?", "task": "Translate (informal you).", "a": ["Kun je me helpen?", "Kun je mij helpen?", "Kan je me helpen?", "Kan je mij helpen?", "Kun jij me helpen?", "Kun jij mij helpen?", "Kan jij me helpen?", "Kan jij mij helpen?"], "why": "Kun/kan + je + me/mij + helpen at the end."}
+      ],
+      "write": []
+    },
+    {
+      "id": "possessives",
+      "title": "Possessives: mijn, jouw, ons/onze",
+      "nl": "Bezittelijke voornaamwoorden",
+      "level": "A1",
+      "summary": "mijn, jouw/je, uw, zijn, haar, ons/onze, jullie, hun.",
+      "body": [
+        {"table": {"head": ["", "possessive", "example"], "rows": [
+          ["ik", "mijn", "**mijn** moeder"],
+          ["jij", "jouw / je", "**je** fiets"],
+          ["u", "uw", "**uw** paspoort"],
+          ["hij", "zijn", "**zijn** vrouw"],
+          ["zij (she)", "haar", "**haar** man"],
+          ["wij", "ons / onze", "**ons** huis, **onze** auto"],
+          ["jullie", "jullie", "**jullie** kinderen"],
+          ["zij (they)", "hun", "**hun** vader"]
+        ]}},
+        {"h": "ons or onze"},
+        {"p": "**ons** with a singular **het**-word: ons huis, ons kind. **onze** with de-words and all plurals: onze auto, onze kinderen, onze huizen."},
+        {"h": "Mine, of Jan"},
+        {"list": [
+          "Die fiets is **van mij**. (That bike is mine.)",
+          "de fiets **van Jan** or **Jans** fiets (Jan's bike)",
+          "In speech: **Jan z'n fiets**, **Anna d'r tas**"
+        ]}
+      ],
+      "mistakes": [
+        {"wrong": "onze huis", "right": "ons huis", "why": "huis is a singular het-word."},
+        {"wrong": "Die fiets is mijn.", "right": "Die fiets is van mij.", "why": "‘mine’ on its own = van mij."}
+      ],
+      "exercises": [
+        {"id": "po-1", "t": "choice", "q": "Dit is ___ huis. (our)", "opts": ["ons", "onze"], "a": "ons", "why": "het huis, singular → ons."},
+        {"id": "po-2", "t": "choice", "q": "Dat zijn ___ kinderen. (our)", "opts": ["onze", "ons"], "a": "onze", "why": "Plural → onze."},
+        {"id": "po-3", "t": "choice", "q": "De kinderen spelen met ___ vader. (their)", "opts": ["hun", "hen", "haar"], "a": "hun", "why": "hun = their."},
+        {"id": "po-4", "t": "choice", "q": "Is dit ___ jas, mevrouw?", "opts": ["uw", "u", "jouw"], "a": "uw", "why": "Polite possessive: uw."},
+        {"id": "po-5", "t": "type", "q": "Die fiets is van ___. (me)", "a": ["mij"], "why": "van + mij = mine."}
+      ],
+      "write": ["Write two sentences about your family. Use mijn, zijn, haar or onze."]
+    },
+    {
+      "id": "demonstratives",
+      "title": "deze, die, dit, dat",
+      "nl": "Aanwijzende voornaamwoorden",
+      "level": "A1",
+      "summary": "this and that, for de-words and het-words.",
+      "body": [
+        {"table": {"head": ["", "here (this/these)", "there (that/those)"], "rows": [
+          ["de-word", "**deze** stoel", "**die** stoel"],
+          ["het-word", "**dit** huis", "**dat** huis"],
+          ["plural", "**deze** stoelen", "**die** huizen"]
+        ]}},
+        {"p": "To introduce someone or something, use **dit** or **dat**, even for people and plurals: **Dit is** mijn broer. **Dit zijn** mijn kinderen. **Dat is** mijn auto."}
+      ],
+      "mistakes": [
+        {"wrong": "dit stoel", "right": "deze stoel", "why": "stoel is a de-word."},
+        {"wrong": "Deze zijn mijn ouders.", "right": "Dit zijn mijn ouders.", "why": "When you introduce: dit/dat."}
+      ],
+      "exercises": [
+        {"id": "dm-1", "t": "choice", "q": "___ huis hier is van mijn oom.", "opts": ["Dit", "Deze", "Die"], "a": "Dit", "why": "het huis, here → dit."},
+        {"id": "dm-2", "t": "choice", "q": "Wil je ___ appels daar?", "opts": ["die", "dat", "dit"], "a": "die", "why": "Plural, there → die."},
+        {"id": "dm-3", "t": "choice", "q": "___ zijn mijn ouders.", "opts": ["Dit", "Deze"], "a": "Dit", "why": "Introducing: dit zijn."},
+        {"id": "dm-4", "t": "choice", "q": "Welke jas wil je? ___ hier.", "opts": ["Deze", "Dit"], "a": "Deze", "why": "de jas → deze."}
+      ],
+      "write": []
+    },
+    {
+      "id": "question-words",
+      "title": "Question words",
+      "nl": "Vraagwoorden",
+      "level": "A1",
+      "summary": "wie, wat, waar, wanneer, hoe, waarom, welk(e), hoeveel.",
+      "body": [
+        {"table": {"head": ["Dutch", "English", "example"], "rows": [
+          ["wie", "who", "**Wie** is dat?"],
+          ["wat", "what", "**Wat** doe je?"],
+          ["waar", "where", "**Waar** woon je?"],
+          ["waar … vandaan", "where from", "**Waar** kom je **vandaan**?"],
+          ["waar … naartoe", "where to", "**Waar** ga je **naartoe**?"],
+          ["wanneer", "when", "**Wanneer** begint de les?"],
+          ["hoe laat", "what time", "**Hoe laat** is het?"],
+          ["hoe", "how", "**Hoe** gaat het?"],
+          ["hoeveel", "how much / many", "**Hoeveel** kost dat?"],
+          ["waarom", "why", "**Waarom** ben je moe?"],
+          ["welk / welke", "which", "**Welk** huis? **Welke** auto?"],
+          ["wat voor", "what kind of", "**Wat voor** werk doe je?"]
+        ]}},
+        {"p": "**welk** with a singular het-word, **welke** with everything else. After the question word comes the verb, then the subject."}
+      ],
+      "mistakes": [
+        {"wrong": "Waar jij woont?", "right": "Waar woon jij?", "why": "Verb right after the question word; jij drops the -t."},
+        {"wrong": "Welke huis?", "right": "Welk huis?", "why": "huis is a het-word."}
+      ],
+      "exercises": [
+        {"id": "qw-1", "t": "choice", "q": "___ kom je vandaan? — Uit Syrië.", "opts": ["Waar", "Wanneer", "Wie"], "a": "Waar", "why": "waar … vandaan = where from."},
+        {"id": "qw-2", "t": "choice", "q": "___ huis is van jou?", "opts": ["Welk", "Welke"], "a": "Welk", "why": "het huis → welk."},
+        {"id": "qw-3", "t": "order", "en": "How much does the bread cost?", "a": ["Hoeveel kost het brood?"], "why": "Question word, verb, subject."},
+        {"id": "qw-4", "t": "choice", "q": "___ werk doet u? — Ik ben kapper.", "opts": ["Wat voor", "Welk", "Hoe"], "a": "Wat voor", "why": "wat voor = what kind of."}
+      ],
+      "write": ["Write three questions you could ask a new neighbour."]
+    },
+    {
+      "id": "reflexive",
+      "title": "Reflexive verbs: zich",
+      "nl": "Wederkerende werkwoorden",
+      "level": "A2",
+      "summary": "Ik voel me goed. Hij vergist zich.",
+      "body": [
+        {"p": "Some verbs always need a reflexive pronoun. In the dictionary they appear with **zich**: zich voelen, zich vergissen."},
+        {"table": {"head": ["", "zich voelen"], "rows": [
+          ["ik", "voel **me**"],
+          ["jij", "voelt **je**"],
+          ["u", "voelt **zich** / **u**"],
+          ["hij / zij", "voelt **zich**"],
+          ["wij", "voelen **ons**"],
+          ["jullie", "voelen **je**"],
+          ["zij", "voelen **zich**"]
+        ]}},
+        {"p": "Common ones: **zich voelen** (feel), **zich vergissen** (be mistaken), **zich haasten** (hurry), **zich herinneren** (remember), **zich aankleden** (get dressed), **zich voorstellen** (introduce oneself / imagine), **zich verheugen op** (look forward to), **zich schamen** (be ashamed)."},
+        {"p": "The pronoun comes right after the verb or after the subject when they swap: **Morgen kleed ik me** snel aan. **Hij heeft zich** vergist."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik voel goed.", "right": "Ik voel me goed.", "why": "zich voelen needs the pronoun."},
+        {"wrong": "Ik voel mij zich goed.", "right": "Ik voel me goed.", "why": "Only one pronoun, matching the subject."}
+      ],
+      "exercises": [
+        {"id": "rf-1", "t": "choice", "q": "Ik voel ___ niet lekker.", "opts": ["me", "zich", "mijn"], "a": "me", "why": "ik → me."},
+        {"id": "rf-2", "t": "choice", "q": "Wij moeten ___ haasten.", "opts": ["ons", "onze", "zich"], "a": "ons", "why": "wij → ons."},
+        {"id": "rf-3", "t": "choice", "q": "Herinner jij ___ die dag nog?", "opts": ["je", "jou", "zich"], "a": "je", "why": "jij → je."},
+        {"id": "rf-4", "t": "order", "en": "I was mistaken.", "a": ["Ik heb me vergist."], "why": "Perfect: heb + me + participle at the end."}
+      ],
+      "write": ["Write a sentence about how you feel today (zich voelen)."]
+    },
+    {
+      "id": "indefinite",
+      "title": "iemand, niets, alles, allemaal",
+      "nl": "Onbepaalde voornaamwoorden",
+      "level": "A2",
+      "summary": "someone, nobody, something, nothing, everything, everyone.",
+      "body": [
+        {"table": {"head": ["Dutch", "English"], "rows": [
+          ["iemand / niemand", "someone / nobody"],
+          ["iets / niets (niks)", "something / nothing"],
+          ["alles / iedereen", "everything / everyone"],
+          ["allemaal", "all (of them), after the verb"],
+          ["elk / ieder (elke / iedere)", "each, every"],
+          ["sommige", "some (plural)"],
+          ["alle", "all (before a plural noun)"],
+          ["veel / weinig", "a lot / not much"],
+          ["een paar", "a few"],
+          ["allebei / beide", "both"]
+        ]}},
+        {"ex": [
+          ["Is er iemand thuis?", "Is anyone home?"],
+          ["Ik heb niets gezien.", "I saw nothing."],
+          ["Alle kinderen spelen buiten.", "All children play outside."],
+          ["De kinderen spelen allemaal buiten.", "The children are all playing outside."],
+          ["Iedereen is welkom.", "Everyone is welcome."]
+        ]},
+        {"p": "**elk/ieder** with a singular het-word, **elke/iedere** with a de-word: **elk** jaar, **elke** dag. **iedereen** takes a singular verb: iedereen **is**."}
+      ],
+      "mistakes": [
+        {"wrong": "Iedereen zijn hier.", "right": "Iedereen is hier.", "why": "iedereen is singular."},
+        {"wrong": "elk dag", "right": "elke dag", "why": "dag is a de-word."}
+      ],
+      "exercises": [
+        {"id": "in-1", "t": "choice", "q": "Ik sport ___ dag.", "opts": ["elke", "elk", "alle"], "a": "elke", "why": "de dag → elke."},
+        {"id": "in-2", "t": "choice", "q": "Iedereen ___ blij.", "opts": ["is", "zijn"], "a": "is", "why": "iedereen takes a singular verb."},
+        {"id": "in-3", "t": "choice", "q": "Ik hoor ___. Er is niemand.", "opts": ["niets", "iets", "alles"], "a": "niets", "why": "niets = nothing."}
+      ],
+      "write": []
+    },
+    {
+      "id": "relative",
+      "title": "Relative clauses: die, dat, waar",
+      "nl": "Betrekkelijke voornaamwoorden",
+      "level": "B1",
+      "summary": "De man die daar staat. Het huis dat ik koop. Het huis waarin ik woon.",
+      "body": [
+        {"p": "A relative clause adds information about a noun. It is a subordinate clause, so **all verbs go to the end**."},
+        {"table": {"head": ["noun", "pronoun", "example"], "rows": [
+          ["de-word", "**die**", "De vrouw **die** naast mij woont, is lerares."],
+          ["het-word", "**dat**", "Het boek **dat** ik lees, is spannend."],
+          ["plural", "**die**", "De huizen **die** hier staan, zijn oud."],
+          ["person after a preposition", "prep. + **wie**", "De man **met wie** ik praat, is mijn buurman."],
+          ["thing after a preposition", "**waar** + prep.", "Het huis **waarin** ik woon, is klein."],
+          ["after alles, iets, niets, het enige", "**wat**", "Alles **wat** hij zegt, is waar."]
+        ]}},
+        {"p": "Put a comma after the relative clause when the sentence goes on."}
+      ],
+      "mistakes": [
+        {"wrong": "Het boek die ik lees", "right": "Het boek dat ik lees", "why": "boek is a het-word."},
+        {"wrong": "De man die woont naast mij", "right": "De man die naast mij woont", "why": "Verb at the end in a relative clause."},
+        {"wrong": "Alles dat hij zegt", "right": "Alles wat hij zegt", "why": "After alles: wat."}
+      ],
+      "exercises": [
+        {"id": "re-1", "t": "choice", "q": "Het huis ___ ik koop, is oud.", "opts": ["dat", "die", "wat"], "a": "dat", "why": "het huis → dat."},
+        {"id": "re-2", "t": "choice", "q": "De mensen ___ hier wonen, zijn aardig.", "opts": ["die", "dat", "wie"], "a": "die", "why": "Plural → die."},
+        {"id": "re-3", "t": "choice", "q": "Is dit alles ___ je weet?", "opts": ["wat", "dat", "die"], "a": "wat", "why": "After alles → wat."},
+        {"id": "re-4", "t": "order", "en": "The woman who lives next to me is a teacher.", "a": ["De vrouw die naast mij woont, is lerares.", "De vrouw die naast me woont, is lerares."], "why": "Relative clause: woont at the end, then the main verb is."},
+        {"id": "re-5", "t": "choice", "q": "De stoel ___ je zit, is kapot.", "opts": ["waarop", "die op", "op wie"], "a": "waarop", "why": "Thing + preposition → waar + op."}
+      ],
+      "write": ["Describe a person you know with a relative clause: Ik heb een buurman die …"]
+    }
+  ]
+}

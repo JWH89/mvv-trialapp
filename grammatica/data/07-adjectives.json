@@ -1,0 +1,106 @@
+{
+  "id": "adjectives",
+  "title": "Adjectives and adverbs",
+  "nl": "Bijvoeglijke naamwoorden en bijwoorden",
+  "intro": "groot or grote, groter and grootst, and graag.",
+  "topics": [
+    {
+      "id": "adjective-endings",
+      "title": "Adjective endings: groot or grote",
+      "nl": "De buigings-e",
+      "level": "A1",
+      "summary": "Add -e before a noun, except: een / geen / no article + het-word.",
+      "body": [
+        {"p": "After the noun (with zijn, worden, lijken …) an adjective never changes: Het huis **is groot**. De auto **is oud**."},
+        {"p": "Before a noun it gets **-e**, with one exception."},
+        {"table": {"head": ["", "de-word", "het-word"], "rows": [
+          ["de / het / deze / mijn …", "de grot**e** auto", "het grot**e** huis"],
+          ["een / geen / no article", "een grot**e** auto", "een **groot** huis ✱"],
+          ["plural", "grot**e** auto's", "grot**e** huizen"]
+        ]}},
+        {"tip": "✱ The exception: a singular **het-word** with **een, geen, no article, elk, veel, zo'n, welk**: een groot huis, geen mooi weer, lekker brood, elk klein kind."},
+        {"p": "Spelling rules apply: groot → grote, dik → dikke, lief → lieve, grijs → grijze."},
+        {"p": "No -e: adjectives ending in **-en** (de houten tafel, het gouden horloge) and a few loanwords like **prima, oranje, gratis**."}
+      ],
+      "mistakes": [
+        {"wrong": "een grote huis", "right": "een groot huis", "why": "een + het-word: no -e."},
+        {"wrong": "de groot auto", "right": "de grote auto", "why": "Before a noun: -e."},
+        {"wrong": "Het huis is grote.", "right": "Het huis is groot.", "why": "After zijn: no -e."}
+      ],
+      "exercises": [
+        {"id": "aj-1", "t": "choice", "q": "Ik woon in een ___ huis.", "opts": ["groot", "grote"], "a": "groot", "why": "een + het-word: no -e."},
+        {"id": "aj-2", "t": "choice", "q": "Ik woon in het ___ huis op de hoek.", "opts": ["grote", "groot"], "a": "grote", "why": "het + het-word: -e."},
+        {"id": "aj-3", "t": "choice", "q": "Hij heeft een ___ auto.", "opts": ["nieuwe", "nieuw"], "a": "nieuwe", "why": "de auto: always -e before it."},
+        {"id": "aj-4", "t": "choice", "q": "Mijn kamer is ___.", "opts": ["klein", "kleine"], "a": "klein", "why": "After zijn: no -e."},
+        {"id": "aj-5", "t": "type", "q": "Ik eet graag ___ brood. (vers)", "a": ["vers"], "why": "No article + het-word (het brood): no -e."},
+        {"id": "aj-6", "t": "type", "q": "Zij heeft ___ ogen. (blauw)", "a": ["blauwe"], "why": "Plural: -e."}
+      ],
+      "write": ["Describe your house or your room with three adjectives before nouns."]
+    },
+    {
+      "id": "comparison",
+      "title": "Comparing: groter, grootst",
+      "nl": "Trappen van vergelijking",
+      "level": "A2",
+      "summary": "groot – groter – het grootst; groter dan; even groot als.",
+      "body": [
+        {"table": {"head": ["", "more", "most"], "rows": [
+          ["groot", "grot**er**", "het groot**st** / de grootst**e**"],
+          ["duur", "duur**der**", "het duur**st**"],
+          ["mooi", "mooi**er**", "het mooi**st**"],
+          ["goed", "**beter**", "het **best**"],
+          ["veel", "**meer**", "het **meest**"],
+          ["weinig", "**minder**", "het **minst**"],
+          ["graag", "**liever**", "het **liefst**"]
+        ]}},
+        {"p": "After **-r** add **-der**: duurder, lekkerder, verder."},
+        {"list": [
+          "than = **dan**: Amsterdam is groter **dan** Utrecht.",
+          "as … as = **even … als** / **zo … als**: Hij is **even** oud **als** ik.",
+          "Before a noun, -e rules apply: een groter huis, de grootste stad."
+        ]}
+      ],
+      "mistakes": [
+        {"wrong": "groter als Utrecht", "right": "groter dan Utrecht", "why": "Many Dutch people say als, but the standard is dan."},
+        {"wrong": "gooder", "right": "beter", "why": "Irregular."},
+        {"wrong": "duurer", "right": "duurder", "why": "After r: -der."}
+      ],
+      "exercises": [
+        {"id": "cp-1", "t": "type", "q": "Een auto is ___ dan een fiets. (duur)", "a": ["duurder"], "why": "After r: -der."},
+        {"id": "cp-2", "t": "choice", "q": "Rotterdam is groter ___ Den Haag.", "opts": ["dan", "als", "of"], "a": "dan", "why": "than = dan."},
+        {"id": "cp-3", "t": "type", "q": "Dit is de ___ film van het jaar. (goed)", "a": ["beste"], "why": "goed – beter – best; before a noun: beste."},
+        {"id": "cp-4", "t": "choice", "q": "Ik ben even oud ___ mijn man.", "opts": ["als", "dan"], "a": "als", "why": "even … als."},
+        {"id": "cp-5", "t": "choice", "q": "Ik drink ___ thee dan koffie.", "en": "I prefer tea to coffee.", "opts": ["liever", "beter", "meer graag"], "a": "liever", "why": "graag – liever – liefst."}
+      ],
+      "write": ["Compare two cities you know (groter dan, mooier dan …)."]
+    },
+    {
+      "id": "adverbs-graag",
+      "title": "Adverbs and graag",
+      "nl": "Bijwoorden en graag",
+      "level": "A2",
+      "summary": "Hij rijdt snel (no -ly). Ik eet graag vis = I like eating fish.",
+      "body": [
+        {"p": "An adjective can describe a verb without any change. There is no ‘-ly’: Hij rijdt **snel**. Je spreekt **goed** Nederlands."},
+        {"h": "graag: to like doing"},
+        {"p": "Dutch says ‘I like doing’ with **graag** after the verb: Ik **zwem graag**. Ik **lees graag** boeken. More: **liever** (prefer), **het liefst** (like most)."},
+        {"ex": [
+          ["Ik kook graag.", "I like cooking."],
+          ["Ik fiets liever dan dat ik loop.", "I prefer cycling to walking."],
+          ["Ik wil graag een kopje thee.", "I would like a cup of tea."]
+        ]},
+        {"p": "Strength: **heel / erg / zeer** (very), **nogal / vrij** (quite), **te** (too): Het is **heel** koud. Het is **te** duur."}
+      ],
+      "mistakes": [
+        {"wrong": "Ik hou van zwemmen. (only)", "right": "Ik zwem graag.", "why": "Both are fine, but graag is the everyday way."},
+        {"wrong": "Ik graag lees.", "right": "Ik lees graag.", "why": "The verb is in position 2; graag comes after it."}
+      ],
+      "exercises": [
+        {"id": "ad-1", "t": "order", "en": "I like eating fish.", "a": ["Ik eet graag vis."], "why": "Verb in position 2, graag after it."},
+        {"id": "ad-2", "t": "choice", "q": "Ik wandel ___ dan dat ik fiets.", "opts": ["liever", "graag", "liefst"], "a": "liever", "why": "Comparing → liever."},
+        {"id": "ad-3", "t": "translate", "q": "He speaks Dutch well.", "a": ["Hij spreekt goed Nederlands.", "Hij spreekt Nederlands goed."], "why": "goed without any ending."}
+      ],
+      "write": ["What do you like doing in your free time? Use graag and liever."]
+    }
+  ]
+}

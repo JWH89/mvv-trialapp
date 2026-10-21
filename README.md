@@ -21,6 +21,10 @@ De woorden, spreekvragen, modelantwoorden en KNS-thema's in `content.json` zijn 
 
 Een kleine oefenapp (PWA) voor het Basisexamen Inburgering Buitenland. Eén dagelijkse sessie van 10–15 minuten met vier soorten kaarten: KNS (fotoboek), Spreken, Woorden en Werkboek. Herhaling via Leitner (5 dozen). Uitleg in het Engels, inhoud in het Nederlands. Lezen zit er bewust niet in; daarvoor verwijst de app naar het officiële DUO-oefenexamen.
 
+## Grammatica (zus-app)
+
+In de map [`grammatica/`](grammatica/) staat een tweede app met dezelfde techniek: 59 grammaticalessen (A1–B1) met uitleg in het Engels en 284 oefeningen met vaste antwoorden. Online op `https://<gebruikersnaam>.github.io/mvv-oefenapp/grammatica/`. Zie [`grammatica/README.md`](grammatica/README.md). De service worker van de MVV-app slaat die map over; de grammatica-app heeft een eigen service worker.
+
 ## Bestanden
 
 | Bestand | Wat |
