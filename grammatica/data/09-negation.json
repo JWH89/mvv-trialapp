@@ -9,13 +9,20 @@
       "title": "niet or geen",
       "nl": "Niet of geen",
       "level": "A1",
-      "summary": "geen replaces een or no article. Everything else: niet.",
+      "summary": "geen when the noun has een, or nothing at all, in front of it. Everything else: niet.",
       "body": [
-        {"p": "Use **geen** when the noun has **een** or **no article**. It means ‘no / not a / not any’."},
+        {"p": "Use **geen** when the noun has **een** in front of it, or **no article**: nothing in front of it at all. geen means ‘no / not a / not any’."},
+        {"h": "What does ‘no article’ mean?"},
+        {"p": "The article is the little word before a noun: **de**, **het** or **een**. ‘No article’ means the noun stands on its own. English does the same: ‘I drink **coffee**’, ‘I have **children**’. This happens in two common cases:"},
+        {"list": [
+          "**Things you can't count**: koffie, water, geld, tijd, brood. Ik drink **koffie**. Ik heb **tijd**.",
+          "**Plurals in general** (some, any, not specific ones): Ik heb **kinderen**. Ik lees **boeken**."
+        ]},
+        {"tip": "Quick test: is there **een** in front of the noun, or **nothing**? → **geen**. Is there **de, het, mijn, deze, die** … in front? Then it is one specific thing → **niet**."},
         {"table": {"head": ["positive", "negative"], "rows": [
           ["Ik heb **een** auto.", "Ik heb **geen** auto."],
-          ["Ik drink koffie.", "Ik drink **geen** koffie."],
-          ["Ik heb kinderen.", "Ik heb **geen** kinderen."]
+          ["Ik drink koffie. (nothing in front)", "Ik drink **geen** koffie."],
+          ["Ik heb kinderen. (nothing in front)", "Ik heb **geen** kinderen."]
         ]}},
         {"p": "Use **niet** in all other cases: with **de/het/mijn/deze** + noun, names, pronouns, verbs, adjectives."},
         {"table": {"head": ["positive", "negative"], "rows": [
@@ -23,19 +30,26 @@
           ["Ik werk.", "Ik werk **niet**."],
           ["Het is duur.", "Het is **niet** duur."],
           ["Ik ken hem.", "Ik ken hem **niet**."]
-        ]}}
+        ]}},
+        {"h": "Compare"},
+        {"ex": [
+          ["Ik drink geen koffie.", "I don't drink coffee (at all)."],
+          ["Ik drink de koffie niet.", "I'm not drinking the coffee (this cup)."],
+          ["Ik heb geen kinderen.", "I don't have children."],
+          ["Ik zie de kinderen niet.", "I don't see the children."]
+        ]}
       ],
       "mistakes": [
         {"wrong": "Ik heb niet een auto.", "right": "Ik heb geen auto.", "why": "niet + een → geen."},
-        {"wrong": "Ik drink niet koffie.", "right": "Ik drink geen koffie.", "why": "No article → geen."},
+        {"wrong": "Ik drink niet koffie.", "right": "Ik drink geen koffie.", "why": "Nothing in front of koffie (no de, het or een) → geen."},
         {"wrong": "Ik heb geen de sleutel.", "right": "Ik heb de sleutel niet.", "why": "With de → niet."}
       ],
       "exercises": [
-        {"id": "ng-1", "t": "choice", "q": "Ik heb ___ tijd.", "opts": ["geen", "niet"], "a": "geen", "why": "tijd without article → geen."},
+        {"id": "ng-1", "t": "choice", "q": "Ik heb ___ tijd.", "opts": ["geen", "niet"], "a": "geen", "why": "Nothing in front of tijd (no de, het or een) → geen."},
         {"id": "ng-2", "t": "choice", "q": "Ik ken die man ___.", "opts": ["niet", "geen"], "a": "niet", "why": "die man (with die) → niet."},
         {"id": "ng-3", "t": "choice", "q": "Het eten is ___ lekker.", "opts": ["niet", "geen"], "a": "niet", "why": "Adjective → niet."},
         {"id": "ng-4", "t": "rewrite", "q": "Ik heb een fiets.", "task": "Make it negative.", "a": ["Ik heb geen fiets."], "why": "een → geen."},
-        {"id": "ng-5", "t": "translate", "q": "We don't have children.", "a": ["We hebben geen kinderen.", "Wij hebben geen kinderen."], "why": "No article → geen."}
+        {"id": "ng-5", "t": "translate", "q": "We don't have children.", "a": ["We hebben geen kinderen.", "Wij hebben geen kinderen."], "why": "Nothing in front of kinderen (plural in general) → geen."}
       ],
       "write": ["Write three things you don't have or don't do (geen / niet)."]
     },
