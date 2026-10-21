@@ -9,16 +9,16 @@
       "title": "Adjective endings: groot or grote",
       "nl": "De buigings-e",
       "level": "A1",
-      "summary": "Add -e before a noun, except: een / geen / no article + het-word.",
+      "summary": "Add -e before a noun, except: het-word with een, geen or nothing in front.",
       "body": [
         {"p": "After the noun (with zijn, worden, lijken …) an adjective never changes: Het huis **is groot**. De auto **is oud**."},
         {"p": "Before a noun it gets **-e**, with one exception."},
         {"table": {"head": ["", "de-word", "het-word"], "rows": [
           ["de / het / deze / mijn …", "de grot**e** auto", "het grot**e** huis"],
-          ["een / geen / no article", "een grot**e** auto", "een **groot** huis ✱"],
+          ["een / geen / nothing in front", "een grot**e** auto", "een **groot** huis ✱"],
           ["plural", "grot**e** auto's", "grot**e** huizen"]
         ]}},
-        {"tip": "✱ The exception: a singular **het-word** with **een, geen, no article, elk, veel, zo'n, welk**: een groot huis, geen mooi weer, lekker brood, elk klein kind."},
+        {"tip": "✱ The exception: a singular **het-word** with **een, geen, elk, veel, zo'n, welk**, or with **nothing in front** (no article): een groot huis, geen mooi weer, lekker brood, elk klein kind."},
         {"p": "Spelling rules apply: groot → grote, dik → dikke, lief → lieve, grijs → grijze."},
         {"p": "No -e: adjectives ending in **-en** (de houten tafel, het gouden horloge) and a few loanwords like **prima, oranje, gratis**."}
       ],
@@ -32,7 +32,7 @@
         {"id": "aj-2", "t": "choice", "q": "Ik woon in het ___ huis op de hoek.", "opts": ["grote", "groot"], "a": "grote", "why": "het + het-word: -e."},
         {"id": "aj-3", "t": "choice", "q": "Hij heeft een ___ auto.", "opts": ["nieuwe", "nieuw"], "a": "nieuwe", "why": "de auto: always -e before it."},
         {"id": "aj-4", "t": "choice", "q": "Mijn kamer is ___.", "opts": ["klein", "kleine"], "a": "klein", "why": "After zijn: no -e."},
-        {"id": "aj-5", "t": "type", "q": "Ik eet graag ___ brood. (vers)", "a": ["vers"], "why": "No article + het-word (het brood): no -e."},
+        {"id": "aj-5", "t": "type", "q": "Ik eet graag ___ brood. (vers)", "a": ["vers"], "why": "Nothing in front of brood (no article), and it is a het-word (het brood): no -e."},
         {"id": "aj-6", "t": "type", "q": "Zij heeft ___ ogen. (blauw)", "a": ["blauwe"], "why": "Plural: -e."}
       ],
       "write": ["Describe your house or your room with three adjectives before nouns."]
